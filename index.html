@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f7fb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="description" content="Three Paths: read and understand Christianity, Islam and Hinduism, with the full Bible, Quran and Bhagavad Gita.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KPGRlZnM+CjxtYXNrIGlkPSJjbSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iNDAiIHk9IjU1IiB3aWR0aD0iNDAiIGhlaWdodD0iNDYiPjxyZWN0IHg9IjQwIiB5PSI1NSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQ2IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSI3NiIgcj0iOSIgZmlsbD0iIzAwMCIvPjwvbWFzaz4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI4IiBmaWxsPSIjZjZmN2ZiIi8+CjxwYXRoIGQ9Ik0xMiA5OFY1MmExNCAxNCAwIDAgMSAyOCAwdjQ2eiIgZmlsbD0iI2I5YzhmMiIvPgo8cGF0aCBkPSJNNDYgOThWMzhhMTQgMTQgMCAwIDEgMjggMHY2MHoiIGZpbGw9IiNiNGUwZDAiLz4KPHBhdGggZD0iTTgwIDk4VjUyYTE0IDE0IDAgMCAxIDI4IDB2NDZ6IiBmaWxsPSIjZjdjZmEzIi8+CjxyZWN0IHg9IjgiIHk9IjEwMiIgd2lkdGg9IjEwNCIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iIzI2MzA0ZiIvPgo8ZyBmaWxsPSIjMjYzMDRmIj4KPHJlY3QgeD0iMjQuNyIgeT0iNjYiIHdpZHRoPSIyLjYiIGhlaWdodD0iMjIiIHJ4PSIxLjMiLz4KPHJlY3QgeD0iMTYuNSIgeT0iNzMiIHdpZHRoPSIxOSIgaGVpZ2h0PSIyLjYiIHJ4PSIxLjMiLz4KPGNpcmNsZSBjeD0iNjAiIGN5PSI3OCIgcj0iMTAuNSIgbWFzaz0idXJsKCNjbSkiLz4KPC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MS41IDY1LjUpIHNjYWxlKC45OCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI2MzA0ZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgo8cGF0aCBkPSJNNCA4QzQgNC41IDkuNSA0LjUgOS41IDhjMCAyLTMgMi42LTMgMi42Ii8+CjxwYXRoIGQ9Ik02LjUgMTAuNmM0LjUtLjggNiAzLjIgMyA0LjIiLz4KPHBhdGggZD0iTTkuNSAxNC44QzQuNSAxNC42IDMgMTkuNSA2LjUgMjEuMmMzLjUgMS42IDctLjYgNi00LjQgMi40LTMuMiA2LTEuOCA2IDEiLz4KPHBhdGggZD0iTTE1LjUgNy4yYTMuMiAzLjIgMCAwIDAgNiAwIi8+CjxjaXJjbGUgY3g9IjE4LjUiIGN5PSIzLjQiIHI9Ii45IiBmaWxsPSIjMjYzMDRmIi8+CjwvZz4KPC9zdmc+Cg==">
+<title>Three Paths</title>
+<style>
+/* Layout idea: a quiet reading app. Three faith colors carry all the emphasis; everything else stays neutral.
+   Hero circles are drawn with areas proportional to adherents (Pew, 2020). */
+:root{
+  --bg:#eef0f5; --surface:#ffffff; --surface2:#f6f7fb; --ink:#161a2e; --muted:#5b6179; --line:#d8dce8;
+  --christ:#2c4fa3; --islam:#0e7b5d; --hindu:#c96a12;
+  --accent:#2c4fa3;
+  --display:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1220; --surface:#171b2e; --surface2:#1d2238; --ink:#eceef7; --muted:#a0a6c0; --line:#2b3150;
+    --christ:#7f9cf0; --islam:#4fc9a2; --hindu:#f0a050; --accent:#7f9cf0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1220; --surface:#171b2e; --surface2:#1d2238; --ink:#eceef7; --muted:#a0a6c0; --line:#2b3150;
+  --christ:#7f9cf0; --islam:#4fc9a2; --hindu:#f0a050; --accent:#7f9cf0; color-scheme:dark;
+}
+@font-face{font-family:"Instrument Serif";src:url("data/fonts/instrument-serif.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("data/fonts/instrument-serif-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("data/fonts/hanken-grotesk.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Serif Devanagari";src:url("data/fonts/noto-serif-devanagari.woff2") format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
+@font-face{font-family:"AmiriLocal";src:url("data/fonts/amiri-arabic.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem)}
+h3{font-size:1.35rem}
+p{margin:0 0 .9em;max-width:68ch}
+ul{margin:0 0 1em;padding-left:1.2em;max-width:68ch}
+li{margin:.25em 0}
+
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-size:1.6rem;display:flex;align-items:center;gap:10px;background:none;border:0;padding:0}
+.brand svg{width:28px;height:28px}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{background:none;border:0;padding:7px 12px;border-radius:999px;white-space:nowrap;color:var(--muted);font-weight:500;font-size:.95rem}
+nav.tabs button:hover{background:var(--surface2);color:var(--ink)}
+nav.tabs button[aria-current="page"]{background:var(--ink);color:var(--bg)}
+nav.tabs .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+.muted{color:var(--muted)}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:12px 0 36px}
+.hero p.lede{font-size:1.15rem;color:var(--muted);margin-top:16px}
+.hero svg{width:100%;height:auto;max-height:340px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{border:1px solid var(--line);background:var(--surface);padding:10px 18px;border-radius:999px;font-weight:600}
+.btn:hover{border-color:var(--ink)}
+.btn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:left;display:flex;flex-direction:column;gap:8px;border-top:4px solid var(--c)}
+button.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(10,15,40,.10)}
+.card .num{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--c)}
+.card .sub{font-size:.85rem;color:var(--muted)}
+.card p{margin:0;font-size:.96rem}
+
+section.block{margin-top:44px}
+section.block>h2{margin-bottom:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+
+/* bars */
+.bars{display:grid;gap:10px;margin-top:14px}
+.barrow{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;font-size:.92rem}
+.track{height:14px;border-radius:7px;background:var(--surface2);overflow:hidden}
+.fill{height:100%;border-radius:7px;background:var(--c,var(--muted))}
+.barrow b{text-align:right;font-variant-numeric:tabular-nums}
+
+/* religion page */
+.rhead{border-left:6px solid var(--accent);padding-left:18px;margin-bottom:22px}
+.rhead p{color:var(--muted);font-size:1.1rem;margin-top:10px}
+.chips{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;-webkit-overflow-scrolling:touch;margin:18px 0 6px;position:sticky;top:58px;z-index:5;padding:8px 0;background:color-mix(in srgb,var(--bg) 92%,transparent)}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:.88rem;color:var(--muted)}
+.chip:hover{color:var(--ink);border-color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fact .k{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact .v{margin-top:4px;font-weight:600}
+.rsec{margin-top:40px;scroll-margin-top:110px}
+.rsec h2{margin-bottom:12px;display:flex;align-items:baseline;gap:12px}
+.rsec h2 i{font-style:normal;font-size:.8rem;letter-spacing:.1em;color:var(--accent);font-family:var(--body);font-weight:700}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.mini h3{font-size:1.2rem;margin-bottom:6px;color:var(--accent)}
+.mini p{font-size:.95rem;margin:0}
+.mini .when{font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:4px}
+.myth{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px;background:var(--surface)}
+.myth>div{padding:14px 16px;font-size:.95rem}
+.myth>div:first-child{background:var(--surface2);color:var(--muted)}
+.myth b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+@media(max-width:700px){.myth{grid-template-columns:1fr}}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px;margin-top:30px;max-width:70ch}
+
+/* timeline */
+.tl{position:relative;margin-top:18px;padding-left:26px;border-left:2px solid var(--line)}
+.ev{position:relative;padding:0 0 20px 0}
+.ev::before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--c);border:3px solid var(--bg)}
+.ev .y{font-weight:700;font-variant-numeric:tabular-nums;color:var(--c)}
+.ev .t{max-width:66ch}
+.ev .tag{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+
+/* compare */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:.94rem}
+.cmpwrap{overflow-x:auto;border-radius:14px}
+.cmp th,.cmp td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:200px}
+.cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.cmp thead th{position:sticky;top:0;background:var(--surface2);font-family:var(--display);font-size:1.3rem;font-weight:400;border-top:4px solid var(--c)}
+.cmp tbody th{min-width:130px;width:130px;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);background:var(--surface2)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:var(--surface);padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:none;padding:6px 14px;border-radius:999px;font-size:.9rem;color:var(--muted);font-weight:500}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* quiz */
+.quiz{max-width:720px}
+.qtext{font-family:var(--display);font-size:1.7rem;line-height:1.2;margin:8px 0 18px}
+.opt{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:8px}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.ok{border-color:var(--islam);background:color-mix(in srgb,var(--islam) 14%,var(--surface))}
+.opt.no{border-color:#c0392b;background:color-mix(in srgb,#c0392b 12%,var(--surface))}
+.expl{margin:14px 0;padding:14px 16px;border-radius:12px;background:var(--surface2);border:1px solid var(--line)}
+.prog{height:6px;border-radius:3px;background:var(--surface2);overflow:hidden;margin-bottom:6px}
+.prog i{display:block;height:100%;background:var(--ink)}
+.score{font-family:var(--display);font-size:4rem;line-height:1}
+
+/* glossary */
+.search{width:100%;max-width:420px;padding:11px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+.gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:18px}
+.term{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;padding:14px 16px}
+.term b{font-family:var(--display);font-size:1.3rem;font-weight:400}
+.term span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+.term p{margin:4px 0 0;font-size:.93rem}
+footer{max-width:1080px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ===== library and readers ===== */
+.lnk{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;text-underline-offset:3px;text-align:left;font-weight:500}
+.lnk:hover{text-decoration-thickness:2px}
+.sh{margin:34px 0 6px;font-size:1.6rem}
+.shelfnote{margin:6px 0 14px;max-width:70ch}
+.bookgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:10px}
+.bookgrid.surahs{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.bk{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;padding:12px 14px;text-align:left;display:flex;flex-direction:column;gap:3px;position:relative}
+.bk:hover{border-color:var(--c);box-shadow:0 6px 18px rgba(10,15,40,.08)}
+.bk b{font-weight:600}
+.bk span{font-size:.82rem;color:var(--muted)}
+.bk .ar2{font-family:"AmiriLocal",Amiri,serif;font-size:1.25rem;color:var(--ink)}
+.bk .done,.part .done{position:absolute;top:10px;right:12px;font-size:.7rem;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--accent));font-weight:700}
+.pg{height:4px;border-radius:2px;background:var(--surface2);overflow:hidden;margin-top:6px}
+.pg i{display:block;height:100%;background:var(--c)}
+.crumbs{font-size:.88rem;color:var(--muted);margin-bottom:14px}
+.outline{display:grid;gap:8px}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-align:left;display:flex;flex-direction:column;gap:2px;position:relative}
+.part:hover{border-color:var(--accent)}
+.part span{color:var(--muted);font-size:.94rem}
+.chgrid{display:flex;flex-wrap:wrap;gap:6px}
+.ch{min-width:42px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--surface);font-weight:600;font-variant-numeric:tabular-nums}
+.ch:hover{border-color:var(--accent)}
+.ch.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+blockquote.kv{margin:0;padding:16px 20px;border-left:4px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:1.2rem;line-height:1.6;max-width:68ch}
+blockquote.kv cite{display:block;margin-top:8px;font-family:var(--body);font-size:.85rem;font-style:normal;color:var(--muted)}
+.card.feature{flex-direction:row;align-items:center;gap:20px;margin:6px 0 8px}
+.card.feature .num{min-width:64px;text-align:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.card.feature{flex-direction:column;align-items:flex-start}}
+.mini.path ol{padding-left:1.2em;margin:8px 0 12px;font-size:.92rem}
+.mini ol.parts{font-size:.9rem;margin:6px 0 0;padding-left:1.4em}
+details summary{cursor:pointer;color:var(--accent);font-size:.9rem;margin-top:4px}
+a.ext{display:block;margin-top:8px;font-size:.88rem}
+
+.reader{max-width:700px;margin:0 auto}
+.reader.wide{max-width:800px}
+.reader h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:12px}
+.rtools{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:58px;z-index:4;padding:8px 0;background:color-mix(in srgb,var(--bg) 92%,transparent);margin-bottom:10px}
+.rtools button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:.85rem;color:var(--muted)}
+.rtools button:hover{border-color:var(--accent);color:var(--ink)}
+.rtools button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.guide{border-left:4px solid var(--accent);background:var(--surface);padding:12px 16px;border-radius:0 12px 12px 0;margin:6px 0 22px;font-size:.95rem}
+.guide b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.serif{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+.vtext{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:var(--fs);line-height:1.85;max-width:66ch}
+.vrow{scroll-margin-top:130px}
+.vn{background:none;border:0;padding:0 .3em 0 .1em;color:var(--accent);font:600 .62em var(--body);vertical-align:super;cursor:pointer;line-height:1;border-radius:4px}
+.vn.on{background:var(--accent);color:var(--bg)}
+.vn:hover{text-decoration:underline}
+.flash{animation:flash 2.4s ease-out}
+@keyframes flash{0%{background:color-mix(in srgb,var(--accent) 28%,transparent)}100%{background:transparent}}
+.ow{background:none;border:0;padding:0;font:inherit;color:inherit;border-bottom:1.5px dotted var(--accent);cursor:help}
+.ow:hover{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+#tip{position:fixed;z-index:30;max-width:260px;background:var(--ink);color:var(--bg);padding:9px 13px;border-radius:10px;font-size:.9rem;box-shadow:0 8px 24px rgba(0,0,0,.25);line-height:1.4}
+#tip[hidden]{display:none}
+#tip span{font-weight:600}
+.rnav{margin-top:30px}
+.surahhead{text-align:center;margin-bottom:8px}
+.surahhead .ar.big{text-align:center;font-family:"AmiriLocal",Amiri,serif;font-size:2.6rem;line-height:1.5;color:var(--accent)}
+.bis{text-align:center;margin:8px 0 22px}
+.ar{font-family:"AmiriLocal",Amiri,"Noto Naskh Arabic",serif;font-size:calc(var(--fs)*1.65);line-height:2.1;direction:rtl;text-align:right}
+.bis .ar{text-align:center;font-size:calc(var(--fs)*1.7)}
+.ay{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+.ay .vn{position:absolute;left:0;top:18px;font-size:.78rem;vertical-align:baseline;padding:3px 6px;border:1px solid var(--line)}
+.ay .vn.on{border-color:var(--accent)}
+.ay .en{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:var(--fs);line-height:1.7;margin-top:6px}
+.sa{font-family:"Noto Serif Devanagari",serif;font-size:calc(var(--fs)*1.2);line-height:1.9;white-space:pre-line}
+.sa.small{font-size:1.05rem;margin-bottom:6px}
+.tr{font-style:italic;color:var(--muted);white-space:pre-line;font-size:calc(var(--fs)*.92);margin-top:6px;line-height:1.6}
+.gnote{background:var(--surface2);border:1px dashed var(--line);border-radius:12px;padding:10px 14px;margin:26px 0 4px;font-size:.93rem}
+.gnote b{color:var(--accent);margin-right:6px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.tri.two2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.tri,.tri.two2{grid-template-columns:1fr}}
+.triCol{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.triCol .who{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--c)}
+.triCol p{margin:0 0 .6em}
+.triCol .src{font-size:.82rem;color:var(--muted)}
+.triCol .lnk{--accent:var(--c);margin-top:auto;padding-top:6px}
+.gloss{background:var(--surface2);border-radius:10px;padding:10px 12px;font-size:.93rem}
+.gloss b{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hit{font-size:.93rem;line-height:1.55}
+mark{background:color-mix(in srgb,var(--accent) 30%,transparent);color:inherit;border-radius:3px;padding:0 1px}
+.bmrow{display:flex;gap:14px;justify-content:space-between;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;padding:12px 16px;margin-bottom:8px}
+.bmrow p{margin:4px 0 0;font-size:.95rem}
+.btn.small{padding:5px 12px;font-size:.82rem;flex:none}
+.loading{padding:40px 0;text-align:center}
+.chip{flex:none;white-space:nowrap}
+.tl .ev .t{max-width:70ch}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <button class="brand" id="brand" aria-label="Three Paths home">
+    <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M2 23V12a3.4 3.4 0 0 1 6.8 0v11z" fill="#b9c8f2"/><path d="M10.6 23V8.5a3.4 3.4 0 0 1 6.8 0V23z" fill="#b4e0d0"/><path d="M19.2 23V12a3.4 3.4 0 0 1 6.8 0v11z" fill="#f7cfa3"/><rect x="1" y="24" width="26" height="2.2" rx="1.1" fill="currentColor"/></svg>
+    Three Paths
+  </button>
+  <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+</div></header>
+<main id="app"></main>
+<div id="tip" role="tooltip" hidden></div>
+<footer>Figures: Pew Research Center, 2025 report on the global religious landscape (data for 2020), counted by self-reported affiliation. Each tradition is internally diverse; this app describes mainstream scholarly and self-descriptions, not every community's view. <a href="#about" style="color:inherit;text-decoration:underline;white-space:nowrap">About, sources and privacy</a></footer>
+
+<script src="data/meta.js"></script>
+<script src="data/guides-bible.js"></script>
+<script src="data/guides-more.js"></script>
+<script src="data/deep.js"></script>
+<script>
+"use strict";
+/* ============================ DATA ============================ */
+const R = {
+ christianity:{
+  id:"christianity", name:"Christianity", c:"var(--christ)", short:"Christianity",
+  num:"2.3 billion", pct:"28.8%", n:2.3,
+  tagline:"Faith centered on Jesus of Nazareth, whom Christians confess as the Son of God, crucified and risen.",
+  facts:[["Followers","2.3 billion (28.8% of world), the largest religion"],["Began","1st century CE, Judea (Roman province)"],["Central figure","Jesus Christ"],["Scripture","The Bible: Old and New Testaments"],["Place of worship","Church, cathedral, chapel"],["Largest region","Sub-Saharan Africa (30.7% of Christians)"],["Main branches","Catholic, Orthodox, Protestant"],["Sacred day","Sunday (most traditions)"]],
+  sections:[
+   {id:"origins",t:"Origins",h:`<p>Christianity grew out of Second Temple Judaism. Jesus of Nazareth, a Jewish teacher from Galilee, preached the "kingdom of God," gathered disciples, and was crucified under Roman governor Pontius Pilate, around 30 to 33 CE. His followers proclaimed that God raised him from the dead. That claim, the resurrection, is the foundation of the faith.</p><p>The movement spread through the Roman Empire along roads and sea lanes. Paul of Tarsus, a Pharisee who became a follower, wrote letters to early communities and argued that non-Jews could join without keeping the full Jewish law. After centuries of intermittent persecution, Constantine's Edict of Milan (313) granted toleration, and by 380 Nicene Christianity was the Roman Empire's official faith.</p>`},
+   {id:"beliefs",t:"Core beliefs",h:`<div class="grid3">
+     <div class="mini"><h3>One God, three persons</h3><p>The Trinity: Father, Son, and Holy Spirit, one divine being. The Nicene Creed (325, expanded 381) is the most widely shared statement of this.</p></div>
+     <div class="mini"><h3>Incarnation</h3><p>God became human in Jesus, fully divine and fully human (affirmed at Chalcedon, 451).</p></div>
+     <div class="mini"><h3>Cross and resurrection</h3><p>Jesus' death is understood as atonement for human sin; his resurrection as victory over death and the promise of new life.</p></div>
+     <div class="mini"><h3>Grace and salvation</h3><p>Salvation is a gift of God. Traditions differ on how faith, sacraments, and works relate: Protestants stress faith alone, Catholics and Orthodox stress faith working through love and the sacraments.</p></div>
+     <div class="mini"><h3>Church</h3><p>The community of believers, seen as the body of Christ. Authority ranges from a pope (Catholic) to councils of bishops (Orthodox) to scripture and congregations (many Protestants).</p></div>
+     <div class="mini"><h3>Last things</h3><p>Most Christians expect Christ's return, resurrection of the dead, judgment, and a renewed creation. Catholics also teach purgatory; Orthodox and Protestants differ on this.</p></div></div>`},
+   {id:"texts",t:"Sacred texts",h:`<p>The <b>Bible</b> is a library of books written over roughly a thousand years. The <b>Old Testament</b> is largely the Hebrew Bible; the <b>New Testament</b> has 27 books: four Gospels (Matthew, Mark, Luke, John), Acts, letters (many by Paul), and Revelation. Protestant Bibles contain 66 books, Catholic Bibles 73, and Orthodox Bibles slightly more, because they include additional Old Testament writings.</p><p>Christians read scripture in worship through lectionaries, in private devotion, and in study. Translation is central to the faith: the Bible has been rendered into well over a thousand languages, from Jerome's Latin Vulgate to Luther's German Bible to modern translations.</p>`},
+   {id:"practice",t:"Worship and practice",h:`<div class="grid3">
+     <div class="mini"><h3>Baptism</h3><p>Entry rite using water, performed on infants in many traditions and on professing believers in others (Baptist, Pentecostal).</p></div>
+     <div class="mini"><h3>Eucharist</h3><p>Also called Communion or the Lord's Supper. Bread and wine recall the Last Supper. Catholics and Orthodox teach the real presence of Christ; many Protestants see it as symbolic or spiritual.</p></div>
+     <div class="mini"><h3>Prayer</h3><p>Personal and communal. The Lord's Prayer ("Our Father") is shared across nearly all traditions. Forms include liturgy, the rosary, the Jesus Prayer, and extemporaneous prayer.</p></div>
+     <div class="mini"><h3>Weekly worship</h3><p>Usually Sunday, the day of the resurrection: scripture, sermon, music, and prayer, with the Eucharist central in Catholic, Orthodox, and Anglican churches.</p></div>
+     <div class="mini"><h3>Charity and mission</h3><p>Care for the poor, hospitals, schools, and relief work have long been Christian institutions. Missionary outreach shaped the faith's spread.</p></div>
+     <div class="mini"><h3>Pilgrimage and monasticism</h3><p>Jerusalem, Rome, Santiago de Compostela, Mount Athos. Monks and nuns pursue lives of prayer and service.</p></div></div>`},
+   {id:"year",t:"The sacred year",h:`<div class="grid3">
+     <div class="mini"><div class="when">Late Nov or Dec</div><h3>Advent</h3><p>Four weeks of preparation before Christmas.</p></div>
+     <div class="mini"><div class="when">Dec 25 (Jan 7 in some Orthodox churches)</div><h3>Christmas</h3><p>Celebrates the birth of Jesus.</p></div>
+     <div class="mini"><div class="when">Jan 6</div><h3>Epiphany</h3><p>Manifestation of Christ, linked to the visit of the Magi.</p></div>
+     <div class="mini"><div class="when">40 days before Easter</div><h3>Lent</h3><p>Fasting, prayer, and almsgiving, beginning on Ash Wednesday in Western churches.</p></div>
+     <div class="mini"><div class="when">Spring, date moves</div><h3>Holy Week and Easter</h3><p>Palm Sunday, Holy Thursday, Good Friday, and Easter, the central feast of the resurrection. Western and Eastern churches often calculate different Easter dates.</p></div>
+     <div class="mini"><div class="when">50 days after Easter</div><h3>Pentecost</h3><p>Commemorates the Holy Spirit's coming on the apostles, often called the church's birthday.</p></div></div>`},
+   {id:"branches",t:"Branches and diversity",h:`<div class="grid3">
+     <div class="mini"><h3>Catholic</h3><p>The largest single body, led by the pope in Rome. Seven sacraments, a strong teaching authority, and a global network of dioceses and religious orders.</p></div>
+     <div class="mini"><h3>Orthodox</h3><p>Eastern Orthodox (Greek, Russian, Serbian and others) and Oriental Orthodox (Coptic, Armenian, Ethiopian) churches. Rich liturgy, icons, and self-governing national churches.</p></div>
+     <div class="mini"><h3>Protestant</h3><p>Emerged from the 16th-century Reformation: Lutheran, Reformed, Anglican, Baptist, Methodist, Pentecostal, and thousands of denominations and independent churches. Emphasis on scripture and personal faith.</p></div></div><p style="margin-top:14px">Pentecostal and charismatic Christianity grew sharply in Africa, Latin America, and Asia in the last century, and is a major reason the faith's center of gravity moved to the Global South.</p>`},
+   {id:"life",t:"Ethics and daily life",h:`<p>Christian ethics is anchored in the two great commandments Jesus names, to love God and to love your neighbor, and in the Sermon on the Mount. Themes include forgiveness, humility, care for the poor, and the dignity of every person as made in God's image. Traditions apply these differently to questions of war, wealth, marriage, bioethics, and politics, which is why Christians disagree publicly on many issues.</p>`},
+   {id:"myths",t:"Common misconceptions",h:`
+     <div class="myth"><div><b>Misconception</b>Christianity is a mainly Western religion.</div><div><b>Reality</b>Sub-Saharan Africa now has more Christians than Europe, and growth is concentrated in Africa, Asia, and Latin America.</div></div>
+     <div class="myth"><div><b>Misconception</b>All Christians read the Bible the same way.</div><div><b>Reality</b>Traditions differ on canon, translation, authority, and interpretation, from literal readings to historical-critical and liturgical approaches.</div></div>
+     <div class="myth"><div><b>Misconception</b>Christians worship three gods.</div><div><b>Reality</b>Mainstream Christianity teaches one God existing as three persons. Groups that reject the Trinity (such as Unitarians) are outside the historic creeds.</div></div>`}
+  ],
+  timeline:[[30,"Jesus crucified in Jerusalem; followers proclaim the resurrection (c. 30 to 33 CE)"],[48,"Early council in Jerusalem debates whether non-Jewish believers must keep Jewish law (c. 49 CE)"],[313,"Edict of Milan grants religious toleration in the Roman Empire"],[325,"Council of Nicaea produces the first form of the Nicene Creed"],[367,"Athanasius lists the 27 New Testament books"],[380,"Nicene Christianity becomes the Roman Empire's state faith"],[451,"Council of Chalcedon defines Christ as one person in two natures"],[1054,"East-West Schism divides Catholic and Orthodox churches"],[1517,"Martin Luther's Ninety-Five Theses begin the Reformation"],[1545,"Council of Trent opens the Catholic response (1545 to 1563)"],[1962,"Second Vatican Council opens, reforming Catholic liturgy and engagement with the modern world (1962 to 1965)"]]
+ },
+ islam:{
+  id:"islam", name:"Islam", c:"var(--islam)", short:"Islam",
+  num:"2.0 billion", pct:"25.6%", n:2.0,
+  tagline:"Submission to the one God, revealed through the Quran to the Prophet Muhammad, in the line of earlier prophets.",
+  facts:[["Followers","About 2 billion (25.6% of world), the fastest growing"],["Began","7th century CE, Mecca and Medina, Arabia"],["Central figure","Muhammad, final prophet"],["Scripture","The Quran (plus Hadith as a source of guidance)"],["Place of worship","Mosque (masjid)"],["Largest region","Asia-Pacific"],["Main branches","Sunni (large majority), Shia, with Sufi paths in both"],["Sacred day","Friday congregational prayer"]],
+  sections:[
+   {id:"origins",t:"Origins",h:`<p>Muslims believe Islam is the original, universal message of God, renewed through prophets including Adam, Abraham, Moses, and Jesus, and completed with Muhammad. Muhammad was born in Mecca around 570 CE. In 610, in a cave on Mount Hira, he received the first revelation. He preached belief in one God and social justice, and met opposition from Mecca's leaders.</p><p>In 622 he and his followers migrated to Medina, an event called the <b>Hijra</b> that marks year 1 of the Islamic calendar. Muhammad returned to Mecca in 630 and died in 632. Within a century, the caliphs' armies and traders carried Islam from Spain to the Indus, and later to Southeast Asia and sub-Saharan Africa through trade and scholarship.</p>`},
+   {id:"beliefs",t:"Core beliefs",h:`<div class="grid3">
+     <div class="mini"><h3>Tawhid</h3><p>The absolute oneness of God (Allah, Arabic for "the God"). God has no partners and no equal, and is merciful and just.</p></div>
+     <div class="mini"><h3>Prophethood</h3><p>God sent prophets to every people. Muslims honor Moses, Jesus (Isa), and others, while holding Muhammad to be the last. Jesus is revered as a prophet, born of the Virgin Mary, not as God's son.</p></div>
+     <div class="mini"><h3>Revelation</h3><p>The Quran is God's final word, preserved in Arabic. Earlier scriptures (Torah, Psalms, Gospel) are respected as revelations.</p></div>
+     <div class="mini"><h3>Angels and unseen</h3><p>Angels such as Jibril (Gabriel) carry revelation; belief in the unseen is part of faith.</p></div>
+     <div class="mini"><h3>Accountability</h3><p>Each person answers on the Day of Judgment for their deeds, with a hope in God's mercy; paradise and hell follow.</p></div>
+     <div class="mini"><h3>Divine decree (qadar)</h3><p>God's knowledge and will encompass all things, held together with real human moral responsibility. These are the six articles of faith.</p></div></div>`},
+   {id:"texts",t:"Sacred texts",h:`<p>The <b>Quran</b> has 114 chapters (surahs), revealed to Muhammad over about 23 years and recited, memorized, and written down. Millions of Muslims have memorized it entirely (a <i>hafiz</i>). Its Arabic is considered inimitable, so translations are called interpretations of its meaning, and recitation is itself an art form.</p><p>The <b>Hadith</b> are reports of Muhammad's words and actions, and the <b>Sunnah</b> is his example. Collections such as Sahih al-Bukhari and Sahih Muslim are especially respected by Sunnis; Shia rely on their own collections, including works transmitted through the Imams. Islamic law (<i>sharia</i>, "the path") is developed by scholars through the Quran, Sunnah, and juristic reasoning, and is interpreted differently across schools such as Hanafi, Maliki, Shafi'i, Hanbali, and Ja'fari.</p>`},
+   {id:"practice",t:"The Five Pillars",h:`<div class="grid3">
+     <div class="mini"><h3>1. Shahada</h3><p>The declaration of faith: there is no god but God, and Muhammad is God's messenger.</p></div>
+     <div class="mini"><h3>2. Salat</h3><p>Ritual prayer five times a day, facing Mecca, after wudu (ablution). Friday midday prayer is congregational with a sermon.</p></div>
+     <div class="mini"><h3>3. Zakat</h3><p>Obligatory almsgiving, typically 2.5% of qualifying savings each year, for the poor and others in need.</p></div>
+     <div class="mini"><h3>4. Sawm</h3><p>Fasting from dawn to sunset during Ramadan: no food, drink, or marital relations by day, with exemptions for illness, travel, and other cases.</p></div>
+     <div class="mini"><h3>5. Hajj</h3><p>Pilgrimage to Mecca, at least once in a lifetime for those physically and financially able. Millions gather in the month of Dhul Hijjah.</p></div>
+     <div class="mini"><h3>Beyond the pillars</h3><p>Halal (permitted) and haram (forbidden) shape diet and finance; the Quran forbids pork, intoxicants, and interest. Modest dress and etiquette are widely observed, interpreted differently across cultures.</p></div></div>`},
+   {id:"year",t:"The sacred year",h:`<p>The Islamic calendar is lunar, about 354 days, so holidays move roughly 11 days earlier each year against the solar calendar.</p><div class="grid3">
+     <div class="mini"><div class="when">9th month</div><h3>Ramadan</h3><p>Month of fasting, nightly prayers, Quran recitation, and charity. Laylat al-Qadr, the "Night of Power," marks the first revelation.</p></div>
+     <div class="mini"><div class="when">1 Shawwal</div><h3>Eid al-Fitr</h3><p>Festival ending Ramadan: special prayer, charity (zakat al-fitr), feasting, and visiting family.</p></div>
+     <div class="mini"><div class="when">10 Dhul Hijjah</div><h3>Eid al-Adha</h3><p>"Feast of Sacrifice," recalling Ibrahim's willingness to sacrifice his son; meat is shared with the poor and neighbors.</p></div>
+     <div class="mini"><div class="when">1 Muharram</div><h3>Islamic New Year</h3><p>Marks the Hijra of 622.</p></div>
+     <div class="mini"><div class="when">10 Muharram</div><h3>Ashura</h3><p>Shia mourn the martyrdom of Husayn at Karbala (680); many Sunnis fast.</p></div>
+     <div class="mini"><div class="when">12 Rabi' al-awwal</div><h3>Mawlid</h3><p>Birthday of the Prophet, celebrated widely though not by all Muslims.</p></div></div>`},
+   {id:"branches",t:"Branches and diversity",h:`<div class="grid3">
+     <div class="mini"><h3>Sunni</h3><p>The large majority of Muslims. They hold that the community chose Abu Bakr as Muhammad's first successor (caliph) and follow one of four main legal schools.</p></div>
+     <div class="mini"><h3>Shia</h3><p>Roughly one in ten Muslims. They hold that leadership belonged to Muhammad's family through Ali and the Imams. Largest group: Twelver Shia, concentrated in Iran, Iraq, Azerbaijan, and Bahrain; others include Ismailis and Zaydis.</p></div>
+     <div class="mini"><h3>Sufism</h3><p>The mystical dimension, practiced inside Sunni and Shia communities: remembrance of God (dhikr), poetry (Rumi), and orders led by spiritual teachers.</p></div></div><p style="margin-top:14px">The Ibadi community (mainly Oman) is a separate, older tradition. The most populous Muslim country is Indonesia, and most Muslims are not Arab.</p>`},
+   {id:"life",t:"Ethics and daily life",h:`<p>Islamic ethics ties worship to conduct: honesty in trade, care for orphans and the poor, hospitality, justice, and responsibility to family and neighbors. Daily life is organized around prayer times, and many Muslims greet with "as-salamu alaykum" (peace be upon you). Views on law, gender, politics, and the role of tradition vary widely, from scholars who stress classical jurisprudence to reformers and secular-leaning Muslims.</p>`},
+   {id:"myths",t:"Common misconceptions",h:`
+     <div class="myth"><div><b>Misconception</b>Muslims worship a different God than Jews and Christians.</div><div><b>Reality</b>"Allah" is simply Arabic for God, also used by Arabic-speaking Christians. Muslims see their faith as returning to Abraham's pure monotheism.</div></div>
+     <div class="myth"><div><b>Misconception</b>Most Muslims are Arab.</div><div><b>Reality</b>Arabs are a minority; the largest Muslim populations are in Indonesia, Pakistan, India, and Bangladesh.</div></div>
+     <div class="myth"><div><b>Misconception</b>Jihad means "holy war."</div><div><b>Reality</b>It means striving or struggle, primarily the inner effort to live righteously. Classical law also regulates armed conflict, and the term is contested and misused by extremists.</div></div>`}
+  ],
+  timeline:[[570,"Muhammad born in Mecca (traditional date)"],[610,"First revelation in the cave of Hira"],[622,"The Hijra to Medina; year 1 of the Islamic calendar"],[630,"Muhammad returns to Mecca"],[632,"Death of Muhammad; Abu Bakr becomes first caliph"],[656,"Dispute over succession deepens, leading to the Sunni-Shia division (Ali becomes caliph)"],[661,"Umayyad caliphate begins, centered in Damascus"],[680,"Husayn killed at Karbala, foundational for Shia memory"],[750,"Abbasid caliphate rises in Baghdad; golden age of science and scholarship follows"],[830,"House of Wisdom flourishes in Baghdad (c. early 9th century)"],[1258,"Mongols sack Baghdad, ending the Abbasid caliphate there"],[1453,"Ottomans conquer Constantinople"],[1924,"Ottoman caliphate abolished"]]
+ },
+ hinduism:{
+  id:"hinduism", name:"Hinduism", c:"var(--hindu)", short:"Hinduism",
+  num:"1.2 billion", pct:"14.9%", n:1.2,
+  tagline:"A family of traditions with no single founder, rooted in the Vedas and centered on dharma, karma, rebirth, and liberation.",
+  facts:[["Followers","About 1.2 billion (14.9% of world); about 95% live in India"],["Began","No single founding; Vedic roots from c. 1500 BCE or earlier"],["Central figure","None; many teachers, deities, and sages"],["Scripture","Vedas, Upanishads, Gita, epics, Puranas"],["Place of worship","Temple (mandir) and home shrine"],["Self-name","Sanatana Dharma (eternal way), among many names"],["Main streams","Vaishnava, Shaiva, Shakta, Smarta"],["Language","Sanskrit and many regional languages"]],
+  sections:[
+   {id:"origins",t:"Origins",h:`<p>Hinduism has no single founder, creed, or date of origin. The word comes from <i>Sindhu</i>, the Sanskrit name for the Indus River, used by outsiders such as Persians and Greeks for the people beyond it. Many Hindus describe their faith as <b>Sanatana Dharma</b>, an eternal way of life.</p><p>Scholars trace its roots to the Vedic religion of the second millennium BCE, shaped by hymns, fire rituals, and priests, together with other local and ascetic traditions across the subcontinent. Whether the earlier Indus Valley civilization (c. 2600 to 1900 BCE) contributed is debated. From about 800 BCE the Upanishads turned from ritual toward inner knowledge; the epics and Puranas later popularized devotion to personal deities.</p>`},
+   {id:"beliefs",t:"Core beliefs",h:`<div class="grid3">
+     <div class="mini"><h3>Dharma</h3><p>Right order, duty, and moral law, both cosmic and personal. What is right depends on one's stage of life, role, and circumstances.</p></div>
+     <div class="mini"><h3>Karma and samsara</h3><p>Actions carry consequences across lifetimes. The soul is reborn in a cycle (samsara) shaped by karma.</p></div>
+     <div class="mini"><h3>Atman and Brahman</h3><p>The atman is the inner self; Brahman is the ultimate reality. Advaita Vedanta teaches they are one; other schools teach a relationship of devotion or difference.</p></div>
+     <div class="mini"><h3>Moksha</h3><p>Liberation from rebirth, realized as knowledge, union with, or loving service to the divine, depending on the school.</p></div>
+     <div class="mini"><h3>Four aims of life</h3><p>Dharma (duty), artha (prosperity), kama (pleasure and love), and moksha (liberation).</p></div>
+     <div class="mini"><h3>Many forms, one reality</h3><p>Hindus worship the divine as Vishnu, Shiva, Devi, Ganesha, and many others. Some are monotheists, some see all deities as aspects of one Brahman, and some focus on a single chosen deity (<i>ishta devata</i>).</p></div></div>`},
+   {id:"texts",t:"Sacred texts",h:`<div class="grid3">
+     <div class="mini"><h3>Vedas</h3><p>Four collections: Rigveda, Samaveda, Yajurveda, Atharvaveda. Revealed texts (<i>shruti</i>), transmitted orally for centuries.</p></div>
+     <div class="mini"><h3>Upanishads</h3><p>Philosophical dialogues on self and ultimate reality, the basis of Vedanta.</p></div>
+     <div class="mini"><h3>Bhagavad Gita</h3><p>A 700-verse dialogue within the Mahabharata, in which Krishna counsels Arjuna on duty, devotion, and knowledge. Probably the most widely read Hindu text.</p></div>
+     <div class="mini"><h3>Epics</h3><p>The Ramayana (Rama and Sita) and the Mahabharata, among the longest poems ever composed, shape values and storytelling across South and Southeast Asia.</p></div>
+     <div class="mini"><h3>Puranas and Agamas</h3><p>Stories of the gods, cosmology, and temple and ritual manuals, central to everyday devotion.</p></div>
+     <div class="mini"><h3>Dharmashastras</h3><p>Legal and social treatises, such as the Manusmriti, historically influential and also sharply criticized for their caste and gender hierarchies.</p></div></div>`},
+   {id:"practice",t:"Worship and practice",h:`<div class="grid3">
+     <div class="mini"><h3>Puja</h3><p>Offerings of flowers, light, incense, and food to an image or symbol of the divine, at home or in a temple. Seeing and being seen by the deity is <i>darshan</i>.</p></div>
+     <div class="mini"><h3>Paths (marga)</h3><p>Jnana (knowledge), bhakti (devotion), karma (selfless action), and raja (meditation and yoga). Different paths suit different temperaments.</p></div>
+     <div class="mini"><h3>Mantra and meditation</h3><p>Repeating sacred sounds such as Om, the Gayatri Mantra, or a deity's name. Yoga began as a discipline of the mind and body for liberation.</p></div>
+     <div class="mini"><h3>Pilgrimage</h3><p>Varanasi, Rishikesh, Tirupati, Puri, and the Ganges. The Kumbh Mela is among the largest gatherings of people on Earth.</p></div>
+     <div class="mini"><h3>Life rites</h3><p>Samskaras mark birth, naming, first food, initiation, marriage, and death. Cremation is customary.</p></div>
+     <div class="mini"><h3>Ahimsa and diet</h3><p>Nonviolence is a core ideal. Many Hindus are vegetarian, and the cow is revered by many.</p></div></div>`},
+   {id:"year",t:"The sacred year",h:`<p>Hindu festivals follow regional lunisolar calendars, so dates shift each year and vary by region.</p><div class="grid3">
+     <div class="mini"><div class="when">Oct or Nov</div><h3>Diwali</h3><p>Festival of lights celebrating the victory of light over darkness, Lakshmi, and in many regions Rama's return to Ayodhya.</p></div>
+     <div class="mini"><div class="when">Feb or Mar</div><h3>Holi</h3><p>Festival of colors welcoming spring and recalling the story of Prahlada.</p></div>
+     <div class="mini"><div class="when">Sept or Oct</div><h3>Navaratri and Dussehra</h3><p>Nine nights honoring the goddess Durga, followed by Dussehra, marking the victory of good over evil.</p></div>
+     <div class="mini"><div class="when">Feb or Mar</div><h3>Maha Shivaratri</h3><p>The great night of Shiva, with fasting and night-long worship.</p></div>
+     <div class="mini"><div class="when">Aug or Sept</div><h3>Janmashtami</h3><p>Celebrates the birth of Krishna.</p></div>
+     <div class="mini"><div class="when">Aug or Sept</div><h3>Ganesh Chaturthi</h3><p>Honors Ganesha, remover of obstacles, with processions and the immersion of clay images.</p></div></div>`},
+   {id:"branches",t:"Branches and diversity",h:`<div class="grid3">
+     <div class="mini"><h3>Vaishnavism</h3><p>Devotion to Vishnu and his avatars, especially Rama and Krishna. The largest stream.</p></div>
+     <div class="mini"><h3>Shaivism</h3><p>Devotion to Shiva, with strong ascetic, yogic, and philosophical traditions.</p></div>
+     <div class="mini"><h3>Shaktism</h3><p>Worship of the Goddess (Devi) as the supreme power, as Durga, Kali, or Lakshmi.</p></div>
+     <div class="mini"><h3>Smartism</h3><p>Worship of five deities (Shiva, Vishnu, Devi, Ganesha, Surya) as one reality, associated with Advaita.</p></div></div><p style="margin-top:14px">Major Vedanta teachers include Adi Shankara (Advaita, about 8th century), Ramanuja (11th to 12th century, qualified nondualism), and Madhva (13th century, dualism). Reform movements such as the Arya Samaj and the Ramakrishna Mission arose in the 19th century, and Swami Vivekananda's 1893 address at the Parliament of the World's Religions in Chicago introduced Vedanta to many in the West.</p>`},
+   {id:"life",t:"Ethics, caste, and society",h:`<p>Hindu ethics emphasizes ahimsa, truthfulness, self-discipline, and duty. Traditional social order is expressed through <i>varna</i> (four broad classes) and <i>jati</i> (thousands of endogamous communities). Caste has been a source of deep hierarchy and exclusion, especially for Dalits, historically called "untouchables." India's 1950 Constitution abolished untouchability, and Hindu reformers such as Ambedkar (who left Hinduism for Buddhism), Gandhi, and many saints have challenged caste. Caste discrimination remains an active issue, and Hindus hold a range of views about it.</p>`},
+   {id:"myths",t:"Common misconceptions",h:`
+     <div class="myth"><div><b>Misconception</b>Hindus worship millions of gods.</div><div><b>Reality</b>Many Hindus see the many deities as forms or aspects of one ultimate reality, and many focus devotion on one deity. Views range from monotheism to nondualism to polytheism.</div></div>
+     <div class="myth"><div><b>Misconception</b>Hinduism is only about caste and cows.</div><div><b>Reality</b>Those are one slice. The tradition includes advanced philosophy, devotional poetry, music, art, ethics, and yoga.</div></div>
+     <div class="myth"><div><b>Misconception</b>Yoga in the West is the same as Hinduism.</div><div><b>Reality</b>Yoga has Hindu roots and is one of the six classical philosophical schools. Modern postural yoga is a small part of the original discipline, which emphasizes ethics and meditation.</div></div>`}
+  ],
+  timeline:[[-2600,"Indus Valley civilization at its height (c. 2600 to 1900 BCE)"],[-1500,"Vedic period begins; Rigveda composed over following centuries"],[-800,"Early Upanishads turn toward inner knowledge and the self (c. 800 to 400 BCE)"],[-400,"Mahabharata and Ramayana take shape (c. 400 BCE to 400 CE), including the Bhagavad Gita"],[320,"Gupta era: classical temple building and Puranic devotion flourish (4th to 6th century)"],[788,"Adi Shankara systematizes Advaita Vedanta (traditional dates around 8th century)"],[1100,"Ramanuja teaches qualified nondualism and devotion (11th to 12th century)"],[1500,"Bhakti poet-saints such as Kabir, Mirabai, and Tulsidas popularize devotion in regional languages (c. 15th to 17th centuries)"],[1828,"Brahmo Samaj founded, beginning 19th-century reform movements"],[1893,"Swami Vivekananda speaks at the Parliament of the World's Religions, Chicago"],[1950,"India's Constitution abolishes untouchability"]]
+ }
+};
+
+const COMPARE = [
+ {k:"Origin",c:"1st century CE, Judea; grew from Second Temple Judaism",i:"7th century CE, Arabia; understood as the renewal of Abraham's monotheism",h:"No single origin; Vedic roots from at least c. 1500 BCE, with older local traditions"},
+ {k:"Source of the tradition",c:"Jesus Christ, his life, death, and resurrection",i:"The Quran revealed to Muhammad, plus his example (Sunnah)",h:"The Vedas and a long line of sages, texts, and teachers; no single founder"},
+ {k:"The divine",c:"One God in three persons: Father, Son, Holy Spirit",i:"One God, absolutely single (tawhid); no partners",h:"One ultimate reality (Brahman) seen through many deities; views range from monotheism to nondualism"},
+ {k:"Sacred texts",c:"The Bible (Old and New Testaments)",i:"The Quran; Hadith as a secondary source",h:"Vedas, Upanishads, Bhagavad Gita, epics, Puranas"},
+ {k:"Human condition",c:"Humans are made in God's image but marked by sin; need redemption",i:"Humans are created to serve God, free and accountable, prone to forgetfulness",h:"The self is caught in ignorance and rebirth, shaped by karma"},
+ {k:"Ultimate goal",c:"Eternal life with God, through Christ's grace",i:"Paradise through God's mercy, faith, and righteous deeds",h:"Moksha, liberation from the cycle of rebirth"},
+ {k:"Afterlife",c:"Resurrection, judgment, heaven and hell (purgatory in Catholic teaching)",i:"Judgment, then paradise or hell; belief in resurrection",h:"Rebirth by karma until liberation; heavens and hells are often temporary"},
+ {k:"Core practices",c:"Baptism, Eucharist, prayer, Sunday worship, charity",i:"Five Pillars: shahada, prayer, zakat, fasting, hajj",h:"Puja, mantra, yoga, festivals, pilgrimage, life-cycle rites"},
+ {k:"Religious authority",c:"Varies: pope (Catholic), bishops and councils (Orthodox), scripture and congregations (Protestant)",i:"No central clergy; scholars (ulama) and legal schools; imams lead prayer",h:"Decentralized: gurus, temple priests, monastic orders, and scholars"},
+ {k:"Holy places",c:"Jerusalem, Bethlehem, Rome, Canterbury, and countless local churches",i:"Mecca, Medina, Jerusalem (Al-Aqsa)",h:"Varanasi, the Ganges, Tirupati, Puri, Rishikesh, Kumbh Mela sites"},
+ {k:"Major festivals",c:"Christmas, Easter, Pentecost",i:"Eid al-Fitr, Eid al-Adha, Ramadan",h:"Diwali, Holi, Navaratri, Shivaratri"},
+ {k:"Major divisions",c:"Catholic, Orthodox, Protestant",i:"Sunni, Shia (with Sufi paths)",h:"Vaishnava, Shaiva, Shakta, Smarta"},
+ {k:"Diet",c:"Mostly unrestricted; fasting in Lent for many",i:"Halal rules: no pork or alcohol; fasting in Ramadan",h:"Many vegetarian; beef avoided by most; fasts on festivals"},
+ {k:"Followers",c:"2.3 billion (28.8%)",i:"2.0 billion (25.6%)",h:"1.2 billion (14.9%)"}
+];
+const BRIDGES = [
+ ["Shared roots","Christianity and Islam both trace their story through Abraham, Moses, and Jesus. Muslims revere Jesus (Isa) and Mary (Maryam) as prophet and a woman of great honor, and the Quran has a chapter named for Mary."],
+ ["Prayer and fasting","All three have fixed rhythms of prayer, fasting seasons (Lent, Ramadan, many Hindu fasts), and the idea that discipline of the body opens the heart."],
+ ["Charity","Almsgiving in Christianity, zakat in Islam, and dana in Hinduism all make care for the poor a religious duty."],
+ ["Pilgrimage","Jerusalem and Rome, Mecca, Varanasi and the Ganges: sacred journeys are central to all three."],
+ ["Mysticism","Christian contemplatives, Sufis, and Hindu yogis and bhakti poets all describe direct experience of the divine through love and silence."],
+ ["Golden rule","Each tradition holds teachings that turn on treating others with justice and compassion."]
+];
+
+const GLOSS = [
+ ["Trinity","christianity","One God in three persons: Father, Son, and Holy Spirit."],
+ ["Incarnation","christianity","The belief that God became human in Jesus."],
+ ["Gospel","christianity","\"Good news\"; also the four accounts of Jesus' life in the New Testament."],
+ ["Eucharist","christianity","The rite of bread and wine recalling the Last Supper; also Communion."],
+ ["Sacrament","christianity","A rite understood as a means of grace, such as baptism."],
+ ["Creed","christianity","A formal statement of belief, such as the Nicene Creed."],
+ ["Grace","christianity","God's undeserved gift of favor and forgiveness."],
+ ["Resurrection","christianity","Jesus' rising from the dead, celebrated at Easter."],
+ ["Advent","christianity","The season of preparation before Christmas."],
+ ["Pentecost","christianity","Feast of the Holy Spirit's coming, fifty days after Easter."],
+ ["Reformation","christianity","The 16th-century movement that produced Protestant churches."],
+ ["Tawhid","islam","The oneness of God."],
+ ["Shahada","islam","The declaration of faith; first pillar of Islam."],
+ ["Salat","islam","The five daily ritual prayers."],
+ ["Zakat","islam","Obligatory almsgiving, typically 2.5% of qualifying savings."],
+ ["Sawm","islam","Fasting, especially during Ramadan."],
+ ["Hajj","islam","Pilgrimage to Mecca."],
+ ["Quran","islam","\"Recitation\"; the scripture of Islam, in 114 surahs."],
+ ["Hadith","islam","Reports of the Prophet's sayings and actions."],
+ ["Sunnah","islam","The Prophet's example, a source of guidance beyond the Quran."],
+ ["Sharia","islam","\"The path\"; Islamic law and ethics as developed by scholars."],
+ ["Imam","islam","A prayer leader; for Shia, also a divinely guided successor of Muhammad."],
+ ["Hijra","islam","Muhammad's migration to Medina in 622; the start of the Islamic calendar."],
+ ["Halal","islam","Permitted under Islamic law; the opposite is haram."],
+ ["Ummah","islam","The worldwide Muslim community."],
+ ["Dharma","hinduism","Right order, duty, and moral law."],
+ ["Karma","hinduism","Action and its consequences, across lifetimes."],
+ ["Samsara","hinduism","The cycle of birth, death, and rebirth."],
+ ["Moksha","hinduism","Liberation from the cycle of rebirth."],
+ ["Atman","hinduism","The inner self or soul."],
+ ["Brahman","hinduism","The ultimate reality underlying all existence."],
+ ["Puja","hinduism","Ritual worship with offerings."],
+ ["Darshan","hinduism","Sacred seeing: beholding and being seen by a deity or holy person."],
+ ["Guru","hinduism","A spiritual teacher."],
+ ["Bhakti","hinduism","Loving devotion to a personal deity."],
+ ["Avatar","hinduism","A descent of a deity into the world, such as Rama or Krishna for Vishnu."],
+ ["Ahimsa","hinduism","Nonviolence toward all beings."],
+ ["Vedanta","hinduism","\"End of the Vedas\"; philosophical schools built on the Upanishads."]
+];
+
+const QUIZ = [
+ {r:"christianity",q:"Which council produced the original Nicene Creed?",o:["Council of Nicaea","Council of Trent","Council of Jerusalem","Second Vatican Council"],a:0,e:"Nicaea, in 325 CE. It was expanded at Constantinople in 381."},
+ {r:"christianity",q:"Which event is traditionally dated to 1517 and began the Protestant Reformation?",o:["Edict of Milan","Luther's Ninety-Five Theses","The Great Schism","Council of Chalcedon"],a:1,e:"Martin Luther's Ninety-Five Theses challenged church practices and sparked the Reformation."},
+ {r:"christianity",q:"What does the Eucharist commemorate?",o:["The baptism of Jesus","The Last Supper","The Sermon on the Mount","Pentecost"],a:1,e:"Bread and wine recall Jesus' Last Supper with his disciples."},
+ {r:"christianity",q:"In 1054, what division occurred in Christianity?",o:["Catholic and Protestant","Catholic and Orthodox","Lutheran and Anglican","Sunni and Shia"],a:1,e:"The East-West Schism divided the Catholic and Eastern Orthodox churches."},
+ {r:"christianity",q:"Which three persons make up the Trinity?",o:["Father, Mary, and Spirit","Father, Son, and Holy Spirit","Moses, Jesus, and Paul","God, angels, and saints"],a:1,e:"Christianity teaches one God in three persons: Father, Son, and Holy Spirit."},
+ {r:"christianity",q:"According to Pew's 2020 data, which region has the most Christians?",o:["Europe","North America","Sub-Saharan Africa","Latin America"],a:2,e:"Sub-Saharan Africa now has 30.7% of the world's Christians, more than Europe at 22.3%."},
+ {r:"islam",q:"How many pillars of Islam are there?",o:["Three","Four","Five","Seven"],a:2,e:"The Five Pillars: shahada, salat, zakat, sawm, and hajj."},
+ {r:"islam",q:"The Hijra, Muhammad's migration to Medina, marks year 1 of the Islamic calendar. In which year did it occur?",o:["570 CE","610 CE","622 CE","632 CE"],a:2,e:"The Hijra took place in 622 CE."},
+ {r:"islam",q:"What share of qualifying savings is the typical annual zakat?",o:["1%","2.5%","10%","20%"],a:1,e:"Zakat is usually calculated at 2.5% of qualifying wealth held for a year."},
+ {r:"islam",q:"How many chapters (surahs) does the Quran have?",o:["66","99","114","150"],a:2,e:"The Quran has 114 surahs."},
+ {r:"islam",q:"What was the main origin of the Sunni-Shia division?",o:["A dispute over Quran translation","A dispute over who should lead after Muhammad","A disagreement about fasting","A split over the direction of prayer"],a:1,e:"The split began over succession: Sunnis accepted the elected caliphs, Shia held leadership belonged to Ali and his descendants."},
+ {r:"islam",q:"What does 'tawhid' mean?",o:["Pilgrimage","Almsgiving","The oneness of God","The call to prayer"],a:2,e:"Tawhid is the absolute oneness of God, the central doctrine of Islam."},
+ {r:"islam",q:"How does Islam regard Jesus (Isa)?",o:["As a false prophet","As a major prophet and messenger","As God incarnate","He is not mentioned"],a:1,e:"Muslims honor Jesus as a prophet born of the Virgin Mary, but not as God or God's son."},
+ {r:"hinduism",q:"The Bhagavad Gita is part of which epic?",o:["Ramayana","Mahabharata","Rigveda","Puranas"],a:1,e:"The Gita is a dialogue between Krishna and Arjuna inside the Mahabharata."},
+ {r:"hinduism",q:"What is moksha?",o:["A festival of colors","Liberation from the cycle of rebirth","A type of meditation","A temple ritual"],a:1,e:"Moksha is liberation from samsara, the cycle of birth, death, and rebirth."},
+ {r:"hinduism",q:"Which of these is one of the four Vedas?",o:["Yajurveda","Ramayana","Bhagavad Gita","Mahabharata"],a:0,e:"The four Vedas are Rigveda, Samaveda, Yajurveda, and Atharvaveda."},
+ {r:"hinduism",q:"Diwali is known as the festival of what?",o:["Colors","Lights","Harvest","Rivers"],a:1,e:"Diwali is the festival of lights; Holi is the festival of colors."},
+ {r:"hinduism",q:"What does 'karma' mean?",o:["Action and its consequences","A holy river","Daily prayer","A temple tower"],a:0,e:"Karma is action, and the moral consequences that follow across lifetimes."},
+ {r:"hinduism",q:"Roughly what share of Hindus live in India?",o:["About 50%","About 75%","About 95%","About 99.9%"],a:2,e:"Pew data show about 95% of Hindus live in India."},
+ {r:"hinduism",q:"Who is the 8th-century teacher most associated with Advaita Vedanta?",o:["Ramanuja","Adi Shankara","Madhva","Vivekananda"],a:1,e:"Adi Shankara systematized nondual Vedanta, teaching that atman and Brahman are one."},
+ {r:"all",q:"Which religion grew fastest between 2010 and 2020, according to Pew?",o:["Christianity","Hinduism","Islam","Buddhism"],a:2,e:"Muslims increased by 347 million, more than all other religions combined, and rose to 25.6% of the world's population."},
+ {r:"all",q:"Which two of these religions both trace important stories through Abraham?",o:["Christianity and Islam","Islam and Hinduism","Hinduism and Christianity","None of them"],a:0,e:"Christians and Muslims both honor Abraham, as does Judaism."},
+ {r:"all",q:"Which of these has no single human founder?",o:["Christianity","Islam","Hinduism","All three have founders"],a:2,e:"Hinduism grew over millennia from many sources, without a single founder."},
+ {r:"all",q:"Which religious group is the world's largest by number of adherents?",o:["Christianity","Islam","Hinduism","Religiously unaffiliated"],a:0,e:"Christians number about 2.3 billion, followed by Muslims at about 2 billion."},
+ {r:"all",q:"Which tradition's holy month of fasting follows the lunar calendar and ends with Eid al-Fitr?",o:["Lent","Ramadan","Navaratri","Advent"],a:1,e:"Ramadan is the ninth month of the Islamic calendar; Eid al-Fitr ends it."}
+];
+
+/* ============================ HELPERS ============================ */
+const $ = s => document.querySelector(s);
+const app = $("#app");
+const ORDER = ["overview","christianity","islam","hinduism","library","answers","compare","timeline","quiz","glossary","search","saved"];
+const LABEL = {about:"About",overview:"Overview",christianity:"Christianity",islam:"Islam",hinduism:"Hinduism",compare:"Compare",timeline:"Timeline",quiz:"Quiz",glossary:"Glossary",library:"Library",answers:"Three Answers",search:"Search",saved:"Saved"};
+const DOT = {christianity:"var(--christ)",islam:"var(--islam)",hinduism:"var(--hindu)"};
+const esc = s => String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function go(id){location.hash = id; }
+
+function buildTabs(cur){
+  $("#tabs").innerHTML = ORDER.map(id=>`<button data-go="${id}" ${id===cur?'aria-current="page"':''}>${DOT[id]?`<span class="dot" style="background:${DOT[id]}"></span>`:""}${LABEL[id]}</button>`).join("");
+}
+
+/* ============================ VIEWS ============================ */
+function heroSvg(){
+  // circle areas proportional to adherents: radius = 60*sqrt(billions)
+  const s=60, rc=s*Math.sqrt(2.3), ri=s*Math.sqrt(2.0), rh=s*Math.sqrt(1.2);
+  return `<svg viewBox="0 0 420 340" role="img" aria-label="Three overlapping circles with areas proportional to Christians (2.3 billion), Muslims (2.0 billion), and Hindus (1.2 billion)">
+    <circle cx="140" cy="125" r="${rc}" fill="var(--christ)" opacity=".78"/>
+    <circle cx="280" cy="125" r="${ri}" fill="var(--islam)" opacity=".78"/>
+    <circle cx="210" cy="238" r="${rh}" fill="var(--hindu)" opacity=".82"/>
+    <g font-family="Hanken Grotesk, sans-serif" fill="#fff" text-anchor="middle">
+      <text x="105" y="118" font-size="30" font-family="Instrument Serif, serif">2.3B</text><text x="105" y="138" font-size="12">Christians</text>
+      <text x="318" y="118" font-size="30" font-family="Instrument Serif, serif">2.0B</text><text x="318" y="138" font-size="12">Muslims</text>
+      <text x="210" y="262" font-size="30" font-family="Instrument Serif, serif">1.2B</text><text x="210" y="282" font-size="12">Hindus</text>
+    </g></svg>`;
+}
+function vAbout(){
+  return `<div class="eyebrow">About this app</div><h1>Three Paths</h1>
+  <p class="muted" style="margin:10px 0 18px">An educational guide to Christianity, Islam and Hinduism, built to help you read each tradition's own scripture and understand it in plain words.</p>
+  <section class="block"><h2>Sources and texts</h2><div class="grid3" style="margin-top:12px">
+   <div class="mini"><h3 style="color:var(--ink)">Bible</h3><p>King James Version, public domain. The book guides, outlines and summaries are original writing for this app.</p></div>
+   <div class="mini"><h3 style="color:var(--ink)">Quran</h3><p>Arabic text with the English meaning by Marmaduke Pickthall (1930), public domain in the United States. Translations are renderings of the meaning; the Arabic is the Quran itself.</p></div>
+   <div class="mini"><h3 style="color:var(--ink)">Bhagavad Gita</h3><p>Ancient Sanskrit with transliteration. The English section notes are original paraphrase and are not a published translation.</p></div>
+   <div class="mini"><h3 style="color:var(--ink)">Other Hindu texts</h3><p>Guides in the app, with links to public-domain translations on sacred-texts.com (Griffith, M\u00fcller, Ganguli).</p></div>
+   <div class="mini"><h3 style="color:var(--ink)">Figures</h3><p>Population figures are from the Pew Research Center's 2025 report on the global religious landscape (data for 2020).</p></div>
+   <div class="mini"><h3 style="color:var(--ink)">Fonts</h3><p>Instrument Serif, Hanken Grotesk, Noto Serif Devanagari and Amiri, used under the SIL Open Font License.</p></div></div></section>
+  <section class="block"><h2>Our approach</h2><p>Each tradition is described according to mainstream scholarly and self-descriptions, with the same depth and the same tone for all three. Believers within each tradition differ widely, and a short summary cannot say everything they would. This app is a reference, not a replacement for the guidance of your own community. If you spot an error or a wording that does not sit right, please tell us.</p></section>
+  <section class="block"><h2>Privacy</h2><p>There is no account, no advertising and no tracking. Your bookmarks, reading progress and settings are stored only on your device and are never sent anywhere. All texts and fonts are bundled, so the app works offline. If you tap a link to an outside website, that site's own privacy practices apply.</p></section>
+  <div class="cta"><button class="btn" data-go="overview">Back to start</button></div>`;
+}
+function vOverview(){
+  const rel=Object.values(R);
+  const max=2.3;
+  return `
+  <div class="hero">
+    <div>
+      <div class="eyebrow">A guide to the three largest religions</div>
+      <h1>Three paths to the biggest questions.</h1>
+      <p class="lede">Where do we come from, how should we live, and what lies beyond? Explore how Christianity, Islam, and Hinduism answer, in their own terms, then compare them side by side.</p>
+      <div class="cta"><button class="btn solid" data-go="christianity">Start learning</button><button class="btn" data-go="library-bible">Read the scriptures</button><button class="btn" data-go="answers-0">Three Answers</button><button class="btn" data-go="compare">Compare</button></div>
+    </div>
+    ${heroSvg()}
+  </div>
+  <div class="cards">
+    ${rel.map(r=>`<button class="card" data-go="${r.id}" style="--c:${r.c}">
+      <div class="num">${r.num}</div><div class="sub">${r.pct} of the world's people</div>
+      <h3>${r.name}</h3><p>${r.tagline}</p></button>`).join("")}
+  </div>
+  <section class="block"><h2>Read the scriptures themselves</h2>
+    <p class="muted">Full texts with a plain-language guide to every book, a helper for old words, and verses from all three side by side.</p>
+    <div class="cards" style="margin-top:12px">
+      <button class="card" data-go="library-bible" style="--c:var(--christ)"><div class="num">66</div><div class="sub">books · 1,189 chapters</div><h3>The Bible</h3><p>King James Version with a guide to each book.</p></button>
+      <button class="card" data-go="library-quran" style="--c:var(--islam)"><div class="num">114</div><div class="sub">surahs · 6,236 verses</div><h3>The Quran</h3><p>Arabic with Pickthall's English, and a theme for each surah.</p></button>
+      <button class="card" data-go="library-hindu" style="--c:var(--hindu)"><div class="num">701</div><div class="sub">Gita verses · plus 10 text guides</div><h3>Hindu scriptures</h3><p>The Gita in Sanskrit with plain-English notes, plus guides to the Vedas, Upanishads and epics.</p></button></div></section>
+  <section class="block"><h2>By the numbers</h2>
+    <p class="muted">Pew Research Center counts people by the religion they report, regardless of belief or practice. Data are for 2020.</p>
+    <div class="panel"><div class="bars">
+      ${rel.map(r=>`<div class="barrow" style="--c:${r.c}"><span>${r.name}</span><div class="track"><div class="fill" style="width:${r.n/max*100}%"></div></div><b>${r.num.replace(" billion","B")}</b></div>`).join("")}
+    </div>
+    <p class="muted" style="margin:16px 0 0">Between 2010 and 2020, Christians grew by 122 million, while their share of the world fell 1.8 points. Muslims grew by 347 million and rose to 25.6%, the fastest growth of any group. About 95% of Hindus live in India.</p></div>
+  </section>
+  <section class="block"><h2>What they share</h2>
+    <p class="muted">Different stories, overlapping human questions.</p>
+    <div class="grid3" style="margin-top:12px">${BRIDGES.map(b=>`<div class="mini"><h3 style="color:var(--ink)">${b[0]}</h3><p>${b[1]}</p></div>`).join("")}</div>
+  </section>`;
+}
+
+/* merge deeper sections, in reading order */
+(function(){
+  if(window.DEEP_GLOSS) DEEP_GLOSS.forEach(g=>{ if(!GLOSS.some(x=>x[0]===g[0])) GLOSS.push(g) });
+  if(window.DEEP_QUIZ) DEEP_QUIZ.forEach(q=>QUIZ.push(q));
+  Object.keys(R).forEach(id=>{
+    const all=R[id].sections.concat((window.DEEP&&DEEP[id])||[]), ord=(window.DEEP_ORDER&&DEEP_ORDER[id])||[];
+    const rank=s=>{const i=ord.indexOf(s.id);return i<0?999:i};
+    R[id].sections=all.map((s,i)=>[s,i]).sort((a,b)=>rank(a[0])-rank(b[0])||a[1]-b[1]).map(x=>x[0]);
+  });
+})();
+function vReligion(id){
+  const r=R[id];
+  document.documentElement.style.setProperty("--accent", r.c);
+  return `
+  <div class="rhead" style="border-color:${r.c}"><div class="eyebrow">${r.num} followers · ${r.pct} of the world</div><h1>${r.name}</h1><p>${r.tagline}</p></div>
+  <div class="facts" style="--c:${r.c}">${r.facts.map(f=>`<div class="fact"><div class="k">${f[0]}</div><div class="v">${f[1]}</div></div>`).join("")}</div>
+  <div class="chips" role="navigation" aria-label="Jump to section">${r.sections.map(s=>`<button class="chip" data-jump="${id}-${s.id}">${s.t}</button>`).join("")}<button class="chip" data-jump="${id}-timeline">Timeline</button></div>
+  ${r.sections.map((s,i)=>`<section class="rsec" id="${id}-${s.id}"><h2><i>${String(i+1).padStart(2,"0")}</i>${s.t}</h2>${s.h}</section>`).join("")}
+  <section class="rsec" id="${id}-timeline"><h2><i>${String(r.sections.length+1).padStart(2,"0")}</i>Timeline</h2>
+    <div class="tl" style="--c:${r.c}">${r.timeline.map(t=>`<div class="ev"><div class="y">${fmtYear(t[0])}</div><div class="t">${t[1]}</div></div>`).join("")}</div></section>
+  <div class="cta"><button class="btn" data-go="library-${id==="christianity"?"bible":id==="islam"?"quran":"hindu"}">Read ${id==="christianity"?"the Bible":id==="islam"?"the Quran":"the Gita"}</button><button class="btn" data-go="compare">Compare with the other two</button><button class="btn solid" data-quiz="${id}">Quiz me on ${r.name}</button></div>
+  <p class="note">This summary reflects mainstream scholarly and self-descriptions. Practice and interpretation vary widely among communities, and believers would often say more than can fit here.</p>`;
+}
+function fmtYear(y){ return y<0 ? Math.abs(y)+" BCE" : (y<500?"c. ":"")+y+" CE"; }
+
+let cmpFilter="all";
+function vCompare(){
+  const cols = cmpFilter==="all" ? ["christianity","islam","hinduism"] : cmpFilter.split(",");
+  const key = {christianity:"c",islam:"i",hinduism:"h"};
+  return `<div class="eyebrow">Side by side</div><h1>Compare</h1>
+  <p class="muted" style="margin:10px 0 18px">Fourteen topics, in each tradition's own terms. Pick a pair to focus.</p>
+  <div class="seg" role="group" aria-label="Choose religions">
+    ${[["all","All three"],["christianity,islam","Christianity · Islam"],["christianity,hinduism","Christianity · Hinduism"],["islam,hinduism","Islam · Hinduism"]].map(p=>`<button data-cmp="${p[0]}" aria-pressed="${cmpFilter===p[0]}">${p[1]}</button>`).join("")}
+  </div>
+  <div class="cmpwrap" style="margin-top:18px"><table class="cmp"><thead><tr><th></th>${cols.map(c=>`<th style="--c:${R[c].c}">${R[c].name}</th>`).join("")}</tr></thead>
+  <tbody>${COMPARE.map(row=>`<tr><th scope="row">${row.k}</th>${cols.map(c=>`<td>${row[key[c]]}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+  <section class="block"><h2>Bridges</h2><div class="grid3" style="margin-top:12px">${BRIDGES.map(b=>`<div class="mini"><h3 style="color:var(--ink)">${b[0]}</h3><p>${b[1]}</p></div>`).join("")}</div></section>`;
+}
+
+let tlFilter="all";
+function vTimeline(){
+  const ev=[];
+  Object.values(R).forEach(r=>r.timeline.forEach(t=>ev.push({y:t[0],t:t[1],r:r.id})));
+  ev.sort((a,b)=>a.y-b.y);
+  const shown = ev.filter(e=>tlFilter==="all"||e.r===tlFilter);
+  return `<div class="eyebrow">Four thousand years</div><h1>Timeline</h1>
+  <p class="muted" style="margin:10px 0 18px">Key moments across all three traditions, in order.</p>
+  <div class="seg" role="group" aria-label="Filter timeline">${[["all","All"],["christianity","Christianity"],["islam","Islam"],["hinduism","Hinduism"]].map(p=>`<button data-tl="${p[0]}" aria-pressed="${tlFilter===p[0]}">${p[1]}</button>`).join("")}</div>
+  <div class="tl">${shown.map(e=>`<div class="ev" style="--c:${R[e.r].c}"><div class="y">${fmtYear(e.y)}<span class="tag">${R[e.r].name}</span></div><div class="t">${e.t}</div></div>`).join("")}</div>`;
+}
+
+let gq="", gr="all";
+function vGlossary(){
+  return `<div class="eyebrow">${GLOSS.length} terms</div><h1>Glossary</h1>
+  <p class="muted" style="margin:10px 0 18px">Words you will meet in each tradition.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+    <input id="gsearch" class="search" type="search" placeholder="Search a term" aria-label="Search glossary" value="${esc(gq)}">
+    <div class="seg" role="group" aria-label="Filter glossary">${[["all","All"],["christianity","Christianity"],["islam","Islam"],["hinduism","Hinduism"]].map(p=>`<button data-gr="${p[0]}" aria-pressed="${gr===p[0]}">${p[1]}</button>`).join("")}</div></div>
+  <div class="gl" id="glist">${glossList()}</div>`;
+}
+function glossList(){
+  const q=gq.trim().toLowerCase();
+  const items=GLOSS.filter(g=>(gr==="all"||g[1]===gr)&&(!q||g[0].toLowerCase().includes(q)||g[2].toLowerCase().includes(q)));
+  if(!items.length) return `<p class="muted">No terms match. Try a shorter search.</p>`;
+  return items.map(g=>`<div class="term" style="--c:${R[g[1]].c}"><b>${g[0]}</b><span>${R[g[1]].name}</span><p>${g[2]}</p></div>`).join("");
+}
+
+/* ---- quiz ---- */
+let Q = null;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startQuiz(topic){
+  let pool = topic==="mixed" ? QUIZ : QUIZ.filter(x=>x.r===topic||x.r==="all");
+  const picks = shuffle(pool).slice(0,10).map(x=>{
+    const idx=shuffle(x.o.map((t,i)=>i));
+    return {q:x.q,e:x.e,o:idx.map(i=>x.o[i]),a:idx.indexOf(x.a),r:x.r};
+  });
+  Q={topic,items:picks,i:0,score:0,picked:null,done:false};
+}
+function vQuiz(){
+  if(!Q) return `<div class="quiz"><div class="eyebrow">Check what you learned</div><h1>Quiz</h1>
+    <p class="muted" style="margin:10px 0 20px">Ten questions per round, with an explanation after each answer. Best score: ${store("tp-best")||"none yet"}${store("tp-best")?" / 10":""}.</p>
+    <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      ${[["mixed","All three","var(--ink)"],["christianity","Christianity","var(--christ)"],["islam","Islam","var(--islam)"],["hinduism","Hinduism","var(--hindu)"]].map(t=>`<button class="card" data-quiz="${t[0]}" style="--c:${t[2]}"><h3>${t[1]}</h3><p class="sub">10 questions</p></button>`).join("")}</div></div>`;
+  if(Q.done){
+    const msg=Q.score>=9?"Excellent understanding.":Q.score>=7?"Solid grasp.":Q.score>=4?"Good start. Review the guides and try again.":"Keep exploring, then try again.";
+    return `<div class="quiz"><div class="eyebrow">Round complete</div><div class="score">${Q.score}<span class="muted" style="font-size:1.6rem"> / ${Q.items.length}</span></div>
+      <p style="margin-top:12px">${msg}</p><div class="cta"><button class="btn solid" data-quiz="${Q.topic}">Play again</button><button class="btn" data-quiz-reset>Choose another topic</button></div></div>`;
+  }
+  const it=Q.items[Q.i], ans=Q.picked!==null;
+  return `<div class="quiz"><div class="prog"><i style="width:${(Q.i+(ans?1:0))/Q.items.length*100}%"></i></div>
+    <div class="eyebrow">Question ${Q.i+1} of ${Q.items.length} · Score ${Q.score}</div>
+    <div class="qtext">${it.q}</div>
+    ${it.o.map((t,i)=>`<button class="opt ${ans?(i===it.a?"ok":(i===Q.picked?"no":"")):""}" data-opt="${i}" ${ans?"disabled":""}>${t}</button>`).join("")}
+    ${ans?`<div class="expl"><b>${Q.picked===it.a?"Correct.":"Not quite."}</b> ${it.e}</div><button class="btn solid" data-next>${Q.i+1===Q.items.length?"See my score":"Next question"}</button>`:""}</div>`;
+}
+
+/* ============================ LIBRARY ============================ */
+const BN = META.BN, BCH = META.BCH, QM = META.Q;
+const GITA_N = [47,72,43,42,29,47,30,28,34,42,55,20,35,27,20,24,28,78];
+const TOT_BCH = BCH.reduce((a,b)=>a+b,0);
+const TCOL = {b:"var(--christ)", q:"var(--islam)", g:"var(--hindu)"};
+const DATA = {};
+function loadJSON(name,url){
+  if(DATA[name]) return Promise.resolve(DATA[name]);
+  return fetch(url).then(r=>{ if(!r.ok) throw new Error(url+" "+r.status); return r.json(); }).then(j=>(DATA[name]=j));
+}
+const loadBible=()=>loadJSON("bible","data/bible-kjv.json");
+const loadQuran=()=>loadJSON("quran","data/quran.json");
+const loadGita =()=>loadJSON("gita","data/gita.json");
+
+function jget(k,d){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):d; }catch(e){ return d; } }
+function jset(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+let PREF = Object.assign({fs:19,ow:true,ar:true,en:true,tr:true}, jget("tp-pref",{}));
+let READ = jget("tp-read",{});
+let BM   = jget("tp-bm",[]);
+let JUMP = null;
+const savePref=()=>jset("tp-pref",PREF);
+
+const clean = t => esc(t).replace(/।।\d+\.\d+।।/g,"॥").replace(/\s*।\s*॥/g," ॥");
+/* ---- word helper ---- */
+const OW = GU.oldwords;
+function owText(t){
+  const safe = esc(t.replace(/\s+([;:,.!?])/g,"$1"));
+  if(!PREF.ow) return safe;
+  return safe.replace(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g, w=>{
+    const m = OW[w.toLowerCase()];
+    return m ? `<button class="ow" data-m="${esc(m)}" data-w="${esc(w)}">${w}</button>` : w;
+  });
+}
+function tipShow(el){
+  const tip=$("#tip"); tip.innerHTML=`<b>${el.dataset.w}</b> means <span>${el.dataset.m}</span>`; tip.hidden=false;
+  const r=el.getBoundingClientRect(), tw=tip.offsetWidth;
+  let x=Math.min(Math.max(8,r.left+r.width/2-tw/2), innerWidth-tw-8);
+  let y=r.bottom+8; if(y+tip.offsetHeight>innerHeight-8) y=r.top-tip.offsetHeight-8;
+  tip.style.left=x+"px"; tip.style.top=y+"px";
+}
+function tipHide(){ const t=$("#tip"); if(t) t.hidden=true; }
+
+/* ---- progress ---- */
+const isRead = k => !!READ[k];
+function toggleRead(k){ if(READ[k]) delete READ[k]; else READ[k]=1; jset("tp-read",READ); }
+function bookRead(i){ let n=0; for(let c=1;c<=BCH[i];c++) if(READ["b-"+i+"-"+c]) n++; return n; }
+function countRead(prefix){ return Object.keys(READ).filter(k=>k.startsWith(prefix)).length; }
+function bmHas(k){ return BM.includes(k); }
+function toggleBM(k){ const i=BM.indexOf(k); if(i>=0) BM.splice(i,1); else BM.unshift(k); jset("tp-bm",BM); }
+
+/* ---- helpers ---- */
+function refLabel(k){
+  const p=k.split("-");
+  if(p[0]==="b") return BN[+p[1]]+" "+p[2]+":"+p[3];
+  if(p[0]==="q") return "Quran "+p[1]+":"+p[2]+" ("+QM[+p[1]-1][0]+")";
+  return "Gita "+p[1]+"."+p[2];
+}
+function readHash(k){ const p=k.split("-"); return p[0]==="b"?`read-b-${p[1]}-${p[2]}`: p[0]==="q"?`read-q-${p[1]}`:`read-g-${p[1]}`; }
+function verseOf(k){ const p=k.split("-"); return p[0]==="b"?+p[3]:+p[2]; }
+function prog(n,t,c){ return `<div class="pg" style="--c:${c}"><i style="width:${t?Math.round(n/t*100):0}%"></i></div>`; }
+
+/* ============================ LIBRARY VIEWS ============================ */
+let LAST_SHELF = "bible";
+function pathCards(rel){
+  return GU.paths.filter(p=>p.r===rel).map(p=>{
+    const first=p.s[0];
+    const h = first[0]==="b"?`read-b-${first[1]}-${first[2]}`: first[0]==="q"?`read-q-${first[1]}`:`read-g-${first[2]}`;
+    return `<div class="mini path" style="--accent:${R[p.r].c}"><div class="when">${p.s.length} readings</div><h3>${p.t}</h3><p>${p.d}</p>
+      <ol>${p.s.map(s=>{const hh=s[0]==="b"?`read-b-${s[1]}-${s[2]}`:s[0]==="q"?`read-q-${s[1]}`:`read-g-${s[2]}`;
+        const lab=s[0]==="b"?BN[s[1]]+" "+s[2]:s[0]==="q"?"Surah "+s[1]+" "+QM[s[1]-1][1]:"Gita chapter "+s[2];
+        return `<li><button class="lnk" data-go="${hh}">${lab}</button> <span class="muted">${s[3]}</span></li>`}).join("")}</ol>
+      <button class="btn" data-go="${h}">Begin</button></div>`;}).join("");
+}
+function vLibrary(shelf){
+  LAST_SHELF=shelf;
+  const last=jget("tp-last",null);
+  const shelves=[["bible","Bible","var(--christ)"],["quran","Quran","var(--islam)"],["hindu","Hindu texts","var(--hindu)"]];
+  let body="";
+  if(shelf==="bible"){
+    body=`<p class="muted shelfnote">All 66 books of the King James Version, ${TOT_BCH.toLocaleString()} chapters. Each book has a guide: who wrote it, what happens, how to read it. Tap any old word (thee, hath, verily) in the text for its plain meaning.</p>
+    <h2 class="sh">Reading paths</h2><div class="grid3">${pathCards("christianity")}</div>`+
+    GU.bibleGroups.map(g=>`<h2 class="sh">${g[0]}</h2><p class="muted shelfnote">${g[3]}</p><div class="bookgrid">${
+      Array.from({length:g[2]-g[1]+1},(_,k)=>g[1]+k).map(i=>`<button class="bk" data-go="book-b-${i}" style="--c:var(--christ)"><b>${BN[i]}</b><span>${GU.bible[i][1]} · ${BCH[i]} ch.</span>${prog(bookRead(i),BCH[i],"var(--christ)")}</button>`).join("")}</div>`).join("");
+  } else if(shelf==="quran"){
+    body=`<p class="muted shelfnote">All 114 surahs in Arabic with the English interpretation by Marmaduke Pickthall (1930). Each surah opens with a short guide to its theme.</p>
+    <div class="grid2 two" style="margin-bottom:6px">${GU.quranIntro.map(x=>`<div class="mini" style="--accent:var(--islam)"><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join("")}</div>
+    <h2 class="sh">Reading paths</h2><div class="grid3">${pathCards("islam")}</div>
+    <h2 class="sh">All surahs</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px"><input id="qsearch" class="search" type="search" placeholder="Find a surah by name or number" aria-label="Find a surah"><div class="seg" role="group" aria-label="Filter">${[["all","All"],["Mecca","Meccan"],["Madina","Madinan"]].map(p=>`<button data-qf="${p[0]}" aria-pressed="${QF===p[0]}">${p[1]}</button>`).join("")}</div></div>
+    <div class="bookgrid surahs" id="qlist">${surahList()}</div>`;
+  } else {
+    body=`<p class="muted shelfnote">The Bhagavad Gita is here in full: 701 verses in Sanskrit with transliteration and a plain-English guide for every section. The other Hindu texts are introduced below with reading advice and links to complete public-domain translations.</p>
+    <button class="card feature" data-go="book-g" style="--c:var(--hindu)"><div class="num">18</div><div><h3>Bhagavad Gita</h3><p>${GU.gitaIntro[0][1]}</p><div class="sub">${countRead("g-")} of 18 chapters read</div></div></button>
+    <h2 class="sh">Reading paths</h2><div class="grid3">${pathCards("hinduism")}</div>
+    <h2 class="sh">Other Hindu texts</h2><div class="grid3">${GU.hindu.map(h=>`<div class="mini" style="--accent:var(--hindu)"><div class="when">${h.t} · ${h.w}</div><h3>${h.n}</h3><p>${h.s}</p><p class="muted" style="margin-top:8px"><b>How to start:</b> ${h.r}</p>
+      ${h.parts?`<details><summary>${h.parts.length} books</summary><ol class="parts">${h.parts.map(p=>`<li>${p}</li>`).join("")}</ol></details>`:""}
+      ${(h.l||[]).map(l=>`<a class="ext" href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join("")}</div>`).join("")}</div>`;
+  }
+  return `<div class="eyebrow">Read and understand</div><h1>Library</h1>
+  <div class="seg shelfseg" role="group" aria-label="Choose a shelf" style="margin:16px 0 10px">${shelves.map(s=>`<button data-go="library-${s[0]==="hindu"?"hindu":s[0]}" aria-pressed="${shelf===s[0]}">${s[1]}</button>`).join("")}</div>
+  ${last?`<p style="margin:6px 0 4px"><button class="btn" data-go="${last.h}">Continue: ${esc(last.label)}</button></p>`:""}
+  ${body}`;
+}
+let QF="all", QS="";
+function surahList(){
+  const q=QS.trim().toLowerCase();
+  const out=QM.map((m,i)=>({m,n:i+1})).filter(x=>(QF==="all"||x.m[3]===QF)&&(!q||String(x.n)===q||x.m[0].toLowerCase().includes(q)||x.m[1].toLowerCase().includes(q)));
+  if(!out.length) return `<p class="muted">No surah matches.</p>`;
+  return out.map(({m,n})=>`<button class="bk" data-go="read-q-${n}" style="--c:var(--islam)"><b>${n}. ${m[0]}</b><span class="ar2">${m[2].replace("سُوْرَةُ ","")}</span><span>${m[1]} · ${m[3]==="Mecca"?"Meccan":"Madinan"} · ${m[4]} verses</span>${isRead("q-"+n)?'<em class="done">Read</em>':""}</button>`).join("");
+}
+
+function vBook(i){
+  document.documentElement.style.setProperty("--accent","var(--christ)");
+  const g=GU.bible[i], n=BCH[i];
+  const grp=GU.bibleGroups.find(x=>i>=x[1]&&i<=x[2]);
+  const kv=g[5];
+  const kt = DATA.bible ? DATA.bible[i][kv[0]-1][kv[1]-1] : "";
+  return `<div class="crumbs"><button class="lnk" data-go="library-bible">Library</button> › <button class="lnk" data-go="library-bible">Bible</button> › ${grp[0]}</div>
+  <div class="rhead" style="border-color:var(--christ)"><div class="eyebrow">${g[1]}</div><h1>${BN[i]}</h1><p>${g[2]}</p></div>
+  <div class="facts" style="--c:var(--christ)">
+    <div class="fact"><div class="k">Who wrote it, and when</div><div class="v">${g[0]}</div></div>
+    <div class="fact"><div class="k">Length</div><div class="v">${n} chapter${n>1?"s":""}</div></div>
+    <div class="fact"><div class="k">Main themes</div><div class="v">${g[3].join(", ")}</div></div>
+    <div class="fact"><div class="k">Your progress</div><div class="v">${bookRead(i)} of ${n} read</div></div></div>
+  <section class="rsec"><h2>Outline</h2><p class="muted">What happens, in order. Choose a part to start reading there.</p>
+    <div class="outline">${g[4].map(p=>`<button class="part" data-go="read-b-${i}-${p[0]}"><b>${p[0]===p[1]?"Chapter "+p[0]:"Chapters "+p[0]+" to "+p[1]}</b><span>${p[2]}</span></button>`).join("")}</div></section>
+  <section class="rsec"><h2>A verse to know</h2><blockquote class="kv">${owText(kt)}<cite>${BN[i]} ${kv[0]}:${kv[1]}</cite></blockquote></section>
+  <section class="rsec"><h2>All chapters</h2><div class="chgrid">${Array.from({length:n},(_,k)=>k+1).map(c=>`<button class="ch ${isRead("b-"+i+"-"+c)?"on":""}" data-go="read-b-${i}-${c}" aria-label="Chapter ${c}">${c}</button>`).join("")}</div></section>
+  <div class="cta">${i>0?`<button class="btn" data-go="book-b-${i-1}">← ${BN[i-1]}</button>`:""}<button class="btn solid" data-go="read-b-${i}-1">Start reading</button>${i<65?`<button class="btn" data-go="book-b-${i+1}">${BN[i+1]} →</button>`:""}</div>`;
+}
+function vBookG(){
+  document.documentElement.style.setProperty("--accent","var(--hindu)");
+  return `<div class="crumbs"><button class="lnk" data-go="library-hindu">Library</button> › Hindu texts</div>
+  <div class="rhead" style="border-color:var(--hindu)"><div class="eyebrow">Epic dialogue · 18 chapters · 701 verses</div><h1>Bhagavad Gita</h1><p>${GU.gitaIntro[0][1]}</p></div>
+  <div class="grid2 two">${GU.gitaIntro.slice(1).map(x=>`<div class="mini"><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join("")}</div>
+  <section class="rsec"><h2>Popular verses</h2><div class="chips" style="position:static">${GU.gitaPopular.map(p=>`<button class="chip" data-go="read-g-${p[0]}" data-v="${p[1]}">${p[0]}.${p[1]} · ${p[2]}</button>`).join("")}</div></section>
+  <section class="rsec"><h2>Chapters</h2><div class="outline">${GU.gita.map((c,k)=>`<button class="part" data-go="read-g-${k+1}"><b>${k+1}. ${c[0]} · ${c[1]}</b><span>${c[2]}</span>${isRead("g-"+(k+1))?'<em class="done">Read</em>':""}</button>`).join("")}</div></section>`;
+}
+
+/* ---- readers ---- */
+function tools(opts){
+  return `<div class="rtools" role="toolbar" aria-label="Reading options">
+    <button data-fs="-1" aria-label="Smaller text">A−</button><button data-fs="1" aria-label="Larger text">A+</button>
+    ${opts.ow?`<button data-pref="ow" aria-pressed="${PREF.ow}">Plain-words helper</button>`:""}
+    ${opts.ar?`<button data-pref="ar" aria-pressed="${PREF.ar}">Arabic</button><button data-pref="en" aria-pressed="${PREF.en}">English</button>`:""}
+    ${opts.tr?`<button data-pref="tr" aria-pressed="${PREF.tr}">Transliteration</button>`:""}
+    <button data-read="${opts.key}" aria-pressed="${isRead(opts.key)}">${isRead(opts.key)?"Marked read":"Mark as read"}</button></div>`;
+}
+function readNav(prev,next,key,label){
+  return `<div class="cta rnav">${prev?`<button class="btn" data-go="${prev[0]}">← ${prev[1]}</button>`:""}${next?`<button class="btn solid" data-go="${next[0]}" data-markread="${key}">${label||"Next"}: ${next[1]} →</button>`:""}</div>`;
+}
+function vReadBible(i,c){
+  document.documentElement.style.setProperty("--accent","var(--christ)");
+  const vs=DATA.bible[i][c-1]; if(!vs) return vBook(i);
+  const g=GU.bible[i], key=`b-${i}-${c}`;
+  const part=g[4].find(p=>c>=p[0]&&c<=p[1]);
+  const prev = c>1?[`read-b-${i}-${c-1}`,BN[i]+" "+(c-1)] : i>0?[`read-b-${i-1}-${BCH[i-1]}`,BN[i-1]+" "+BCH[i-1]]:null;
+  const next = c<BCH[i]?[`read-b-${i}-${c+1}`,BN[i]+" "+(c+1)] : i<65?[`read-b-${i+1}-1`,BN[i+1]+" 1"]:null;
+  jset("tp-last",{h:`read-b-${i}-${c}`,label:`${BN[i]} ${c}`});
+  return `<div class="reader" style="--fs:${PREF.fs}px">
+   <div class="crumbs"><button class="lnk" data-go="library-bible">Library</button> › <button class="lnk" data-go="book-b-${i}">${BN[i]}</button> › Chapter ${c}</div>
+   <h1>${BN[i]} ${c}</h1>
+   ${tools({ow:true,key})}
+   <aside class="guide"><b>Guide</b> ${part?`You are in <i>${part[2]}</i> (${part[0]===part[1]?"chapter "+part[0]:"chapters "+part[0]+" to "+part[1]}).`:""} <button class="lnk" data-go="book-b-${i}">Read the book guide</button></aside>
+   <div class="vtext serif">${vs.map((t,k)=>{const v=k+1,bk=`b-${i}-${c}-${v}`;return `<span class="vrow" id="v-${v}"><button class="vn ${bmHas(bk)?"on":""}" data-bm="${bk}" aria-label="Verse ${v}, bookmark">${v}</button><span class="vt">${owText(t)}</span> </span>`}).join("")}</div>
+   ${readNav(prev,next,key)}
+   <p class="note">King James Version (1611), public domain. Tap a verse number to bookmark it.</p></div>`;
+}
+function vReadQuran(n){
+  document.documentElement.style.setProperty("--accent","var(--islam)");
+  const m=QM[n-1]; if(!m) return vLibrary("quran");
+  const ar=DATA.quran.ar[n-1], en=DATA.quran.en[n-1], key="q-"+n;
+  const prev=n>1?[`read-q-${n-1}`,QM[n-2][0]]:null, next=n<114?[`read-q-${n+1}`,QM[n][0]]:null;
+  jset("tp-last",{h:`read-q-${n}`,label:`Surah ${m[0]}`});
+  const BIS_AR="بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ";
+  return `<div class="reader wide" style="--fs:${PREF.fs}px">
+   <div class="crumbs"><button class="lnk" data-go="library-quran">Library</button> › Quran › Surah ${n}</div>
+   <div class="surahhead"><div class="ar big">${m[2]}</div><h1>${n}. ${m[0]}</h1><p class="muted">${m[1]} · ${m[3]==="Mecca"?"Meccan":"Madinan"} · ${m[4]} verses</p></div>
+   ${tools({ar:true,ow:true,key})}
+   <aside class="guide"><b>Theme</b> ${GU.quran[n-1]}</aside>
+   ${n!==1&&n!==9?`<div class="bis"><div class="ar">${BIS_AR}</div>${PREF.en?`<div class="en muted">In the name of Allah, the Beneficent, the Merciful</div>`:""}</div>`:""}
+   ${n===9?`<p class="muted" style="text-align:center">This surah is traditionally recited without the opening Bismillah.</p>`:""}
+   <div class="ayat">${ar.map((a,k)=>{const v=k+1,bk=`q-${n}-${v}`;return `<div class="ay" id="v-${v}"><button class="vn ${bmHas(bk)?"on":""}" data-bm="${bk}" aria-label="Verse ${v}, bookmark">${v}</button>
+     ${PREF.ar?`<div class="ar" lang="ar" dir="rtl">${esc(a)}</div>`:""}${PREF.en?`<div class="en">${owText(en[k])}</div>`:""}</div>`}).join("")}</div>
+   ${readNav(prev,next,key)}
+   <p class="note">Arabic: Uthmani text. English: Marmaduke Pickthall, <i>The Meaning of the Glorious Koran</i> (1930), public domain. Interpretations of the Quran's meaning are not the Quran itself. Data via the Tanzil project and quran-api.</p></div>`;
+}
+function vReadGita(c){
+  document.documentElement.style.setProperty("--accent","var(--hindu)");
+  const g=GU.gita[c-1]; if(!g) return vBookG();
+  const vs=DATA.gita[c-1], key="g-"+c;
+  const prev=c>1?[`read-g-${c-1}`,"Chapter "+(c-1)]:null, next=c<18?[`read-g-${c+1}`,"Chapter "+(c+1)]:null;
+  jset("tp-last",{h:`read-g-${c}`,label:`Gita chapter ${c}`});
+  const starts={}; g[3].forEach(p=>starts[p[0]]=p);
+  return `<div class="reader wide" style="--fs:${PREF.fs}px">
+   <div class="crumbs"><button class="lnk" data-go="library-hindu">Library</button> › <button class="lnk" data-go="book-g">Bhagavad Gita</button> › Chapter ${c}</div>
+   <div class="surahhead"><h1>Chapter ${c}: ${g[1]}</h1><p class="muted">${g[0]} · ${vs.length} verses</p></div>
+   ${tools({tr:true,key})}
+   <aside class="guide"><b>In short</b> ${g[2]}</aside>
+   <div class="ayat">${vs.map((v,k)=>{const n=k+1,bk=`g-${c}-${n}`,s=starts[n];
+     return `${s?`<div class="gnote"><b>Verses ${s[0]} to ${s[1]}</b> ${s[2]}</div>`:""}<div class="ay" id="v-${n}"><button class="vn ${bmHas(bk)?"on":""}" data-bm="${bk}" aria-label="Verse ${n}, bookmark">${n}</button>
+       <div class="sa" lang="sa">${clean(v[0])}</div>${PREF.tr?`<div class="tr">${esc(v[1])}</div>`:""}</div>`}).join("")}</div>
+   ${readNav(prev,next,key)}
+   <p class="note">Sanskrit text and transliteration from the open gita/gita dataset. The section notes are written for this app and are not a translation. For a complete English translation, see the public-domain links in the Library.</p></div>`;
+}
+
+/* ============================ THREE ANSWERS ============================ */
+function vAnswers(idx){
+  const a=GU.answers[idx]||GU.answers[0]; idx=GU.answers.indexOf(a);
+  const [bi,bc,bf,bt]=a.b, [qs,qf,qt]=a.u, [gc,gf,gt]=a.g.r;
+  const btxt=[],qtxt=[],gl=[];
+  for(let v=bf;v<=bt;v++) btxt.push(DATA.bible[bi][bc-1][v-1]);
+  for(let v=qf;v<=qt;v++) qtxt.push(DATA.quran.en[qs-1][v-1]);
+  for(let v=gf;v<=gt;v++) gl.push(DATA.gita[gc-1][v-1]);
+  const bref=`${BN[bi]} ${bc}:${bf}${bt>bf?"–"+bt:""}`, qref=`Quran ${qs}:${qf}${qt>qf?"–"+qt:""}`, gref=`Gita ${gc}.${gf}${gt>gf?"–"+gt:""}`;
+  return `<div class="eyebrow">Same question, three scriptures</div><h1>Three Answers</h1>
+  <p class="muted" style="margin:10px 0 16px">Choose a question. Read what each tradition's own text says, side by side, then follow the link to read it in context.</p>
+  <div class="chips" style="position:static">${GU.answers.map((x,k)=>`<button class="chip ${k===idx?"on":""}" data-go="answers-${k}">${x.t}</button>`).join("")}</div>
+  <h2 style="margin:22px 0 6px">${a.t}</h2><p class="muted">${a.q}</p>
+  <div class="tri">
+   <div class="triCol" style="--c:var(--christ)"><div class="who">Christianity · Bible</div><div class="serif">${btxt.map((t,k)=>`<p>${owText(t)}</p>`).join("")}</div><div class="src">${bref}</div><button class="lnk" data-go="read-b-${bi}-${bc}" data-v="${bf}">Read in context →</button></div>
+   <div class="triCol" style="--c:var(--islam)"><div class="who">Islam · Quran</div><div class="serif">${qtxt.map(t=>`<p>${owText(t)}</p>`).join("")}</div><div class="src">${qref}</div><button class="lnk" data-go="read-q-${qs}" data-v="${qf}">Read in context →</button></div>
+   <div class="triCol" style="--c:var(--hindu)"><div class="who">Hinduism · Bhagavad Gita</div><div class="sa small">${gl.map(v=>clean(v[0].split("\n").filter(l=>!/उवाच/.test(l)).join("\n"))).join("\n")}</div><p class="gloss"><b>Plain-English gloss</b> ${a.g.g}</p><div class="src">${gref}</div><button class="lnk" data-go="read-g-${gc}" data-v="${gf}">Read in context →</button></div>
+  </div>
+  <div class="panel" style="margin-top:16px"><b>Reading the three together.</b> ${a.n}</div>
+  <div class="cta">${idx>0?`<button class="btn" data-go="answers-${idx-1}">← ${GU.answers[idx-1].t}</button>`:""}${idx<GU.answers.length-1?`<button class="btn solid" data-go="answers-${idx+1}">${GU.answers[idx+1].t} →</button>`:""}</div>
+  <p class="note">Bible: King James Version. Quran: Pickthall (1930). Gita: Sanskrit original; the gloss is this app's own paraphrase, not a translation. Each tradition's believers read these passages within a larger tradition of interpretation.</p>`;
+}
+
+/* ============================ SEARCH ============================ */
+let SQ="";
+function vSearch(){
+  return `<div class="eyebrow">Across the Bible and the Quran</div><h1>Search</h1>
+  <p class="muted" style="margin:10px 0 16px">Find any word or phrase in all ${(31102).toLocaleString()} Bible verses and ${(6236).toLocaleString()} Quran verses.</p>
+  <input id="sinput" class="search" type="search" placeholder="Try: mercy, patience, light, shepherd" aria-label="Search the scriptures" value="${esc(SQ)}" style="max-width:520px">
+  <div id="sresults" aria-live="polite">${searchResults()}</div>`;
+}
+function hl(text,words){
+  let s=esc(text);
+  words.forEach(w=>{ if(!w) return; const re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"); s=s.replace(re,"<mark>$1</mark>"); });
+  return s;
+}
+function searchResults(){
+  const words=SQ.trim().toLowerCase().split(/\s+/).filter(w=>w.length>1);
+  if(!words.length) return `<p class="muted" style="margin-top:16px">Type at least two letters.</p>`;
+  const hitsB=[], hitsQ=[]; let nb=0, nq=0;
+  DATA.bible.forEach((book,i)=>book.forEach((ch,c)=>ch.forEach((t,v)=>{ const lo=t.toLowerCase(); if(words.every(w=>lo.includes(w))){ nb++; if(hitsB.length<40) hitsB.push([i,c+1,v+1,t]); } })));
+  DATA.quran.en.forEach((s,i)=>s.forEach((t,v)=>{ const lo=t.toLowerCase(); if(words.every(w=>lo.includes(w))){ nq++; if(hitsQ.length<40) hitsQ.push([i+1,v+1,t]); } }));
+  const col=(title,color,n,items)=>`<div class="triCol" style="--c:${color}"><div class="who">${title}</div><div class="src">${n.toLocaleString()} verse${n===1?"":"s"}${n>40?" (showing 40)":""}</div>${items||'<p class="muted">No matches.</p>'}</div>`;
+  return `<div class="tri two2" style="margin-top:18px">
+   ${col("Bible (KJV)","var(--christ)",nb,hitsB.map(h=>`<p class="hit"><button class="lnk" data-go="read-b-${h[0]}-${h[1]}" data-v="${h[2]}">${BN[h[0]]} ${h[1]}:${h[2]}</button> ${hl(h[3],words)}</p>`).join(""))}
+   ${col("Quran (Pickthall)","var(--islam)",nq,hitsQ.map(h=>`<p class="hit"><button class="lnk" data-go="read-q-${h[0]}" data-v="${h[1]}">${h[0]}:${h[1]} ${QM[h[0]-1][0]}</button> ${hl(h[2],words)}</p>`).join(""))}</div>`;
+}
+
+/* ============================ SAVED ============================ */
+function vSaved(){
+  const last=jget("tp-last",null);
+  const rb=Object.keys(READ).filter(k=>k.startsWith("b-")).length, rq=countRead("q-"), rg=countRead("g-");
+  const txt=k=>{ const p=k.split("-"); try{
+    if(p[0]==="b") return DATA.bible[+p[1]][+p[2]-1][+p[3]-1];
+    if(p[0]==="q") return DATA.quran.en[+p[1]-1][+p[2]-1];
+    return DATA.gita[+p[1]-1][+p[2]-1][1].split("\n")[0];
+  }catch(e){ return ""; } };
+  return `<div class="eyebrow">Your reading, on this device</div><h1>Saved</h1>
+  <div class="cards" style="margin-top:18px">
+   <div class="card" style="--c:var(--christ)"><div class="num">${rb}</div><div class="sub">of ${TOT_BCH.toLocaleString()} Bible chapters read</div>${prog(rb,TOT_BCH,"var(--christ)")}</div>
+   <div class="card" style="--c:var(--islam)"><div class="num">${rq}</div><div class="sub">of 114 surahs read</div>${prog(rq,114,"var(--islam)")}</div>
+   <div class="card" style="--c:var(--hindu)"><div class="num">${rg}</div><div class="sub">of 18 Gita chapters read</div>${prog(rg,18,"var(--hindu)")}</div></div>
+  ${last?`<p style="margin-top:18px"><button class="btn solid" data-go="${last.h}">Continue: ${esc(last.label)}</button></p>`:""}
+  <h2 style="margin:30px 0 10px">Bookmarked verses</h2>
+  ${BM.length?BM.map(k=>`<div class="bmrow" style="--c:${TCOL[k[0]]}"><div><button class="lnk" data-go="${readHash(k)}" data-v="${verseOf(k)}">${refLabel(k)}</button><p>${esc(txt(k))}</p></div><button class="btn small" data-bm="${k}" data-rerender aria-label="Remove bookmark">Remove</button></div>`).join(""):`<p class="muted">No bookmarks yet. In any reader, tap a verse number to save that verse.</p>`}
+  <p class="note">Bookmarks and progress are stored in this browser only, so they won't follow you to another device.</p>`;
+}
+
+/* ============================ ROUTER ============================ */
+let RT=0;
+async function render(){
+  const tok=++RT;
+  const h=(location.hash||"#overview").slice(1), p=h.split("-");
+  let tab=p[0];
+  const simple={about:vAbout,overview:vOverview,compare:vCompare,timeline:vTimeline,quiz:vQuiz,glossary:vGlossary,saved:null,search:null};
+  if(["book","read"].includes(p[0])) tab="library";
+  if(p[0]==="library"||p[0]==="answers"||p[0]==="saved"||p[0]==="search"||R[p[0]]||simple[p[0]]!==undefined||p[0]==='about'||tab==="library"){}
+  else { location.replace("#overview"); return; }
+  buildTabs(tab);
+  document.title = (LABEL[tab]||"Three Paths")+" · Three Paths";
+  if(R[p[0]]) { app.innerHTML=vReligion(p[0]); return finish(); }
+  if(simple[p[0]]) {
+    if(["overview","compare","timeline","quiz","glossary","about"].includes(p[0])) document.documentElement.style.setProperty("--accent",getComputedStyle(document.documentElement).getPropertyValue("--christ"));
+    app.innerHTML=simple[p[0]](); if(p[0]==="overview") document.title="Three Paths"; return finish();
+  }
+  if(p[0]==="library"){ app.innerHTML=vLibrary(p[1]==="quran"?"quran":p[1]==="hindu"?"hindu":"bible"); return finish(); }
+  app.innerHTML=`<p class="muted loading">Loading…</p>`;
+  try{
+    if(p[0]==="book"&&p[1]==="b"){ await loadBible(); if(tok!==RT)return; app.innerHTML=vBook(+p[2]); }
+    else if(p[0]==="book"&&p[1]==="g"){ app.innerHTML=vBookG(); }
+    else if(p[0]==="read"&&p[1]==="b"){ await loadBible(); if(tok!==RT)return; app.innerHTML=vReadBible(+p[2],+p[3]); }
+    else if(p[0]==="read"&&p[1]==="q"){ await loadQuran(); if(tok!==RT)return; app.innerHTML=vReadQuran(+p[2]); }
+    else if(p[0]==="read"&&p[1]==="g"){ await loadGita(); if(tok!==RT)return; app.innerHTML=vReadGita(+p[2]); }
+    else if(p[0]==="answers"){ await Promise.all([loadBible(),loadQuran(),loadGita()]); if(tok!==RT)return; app.innerHTML=vAnswers(+p[1]||0); }
+    else if(p[0]==="search"){ await Promise.all([loadBible(),loadQuran()]); if(tok!==RT)return; app.innerHTML=vSearch(); }
+    else if(p[0]==="saved"){ await Promise.all([loadBible(),loadQuran(),loadGita()]).catch(()=>{}); if(tok!==RT)return; app.innerHTML=vSaved(); }
+    else { location.replace("#overview"); return; }
+  }catch(e){
+    app.innerHTML=`<div class="panel"><h2>Couldn't load the text</h2><p>The scripture files didn't load. Check your connection and reload the page.</p></div>`; return;
+  }
+  finish();
+}
+function finish(){
+  if(JUMP){ const el=document.getElementById("v-"+JUMP); if(el){ el.classList.add("flash"); el.scrollIntoView({block:"center"}); } else window.scrollTo(0,0); JUMP=null; }
+  else if(!KEEP) window.scrollTo(0,0);
+  KEEP=false;
+}
+let KEEP=false;
+function rerender(){ KEEP=true; const y=scrollY; render().then(()=>scrollTo(0,y)); }
+window.addEventListener("hashchange",render);
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button, a");
+  if(!t){ tipHide(); return; }
+  if(t.classList.contains("ow")){ e.stopPropagation(); tipShow(t); return; }
+  tipHide();
+  if(t.tagName==="A") return;
+  if(t.id==="brand"){go("overview");return}
+  if(t.dataset.v) JUMP=+t.dataset.v;
+  if(t.dataset.markread){ READ[t.dataset.markread]=1; jset("tp-read",READ); }
+  if(t.dataset.go){ if(location.hash.slice(1)===t.dataset.go){render()} else go(t.dataset.go); return}
+  if(t.dataset.jump){const el=document.getElementById(t.dataset.jump); if(el) el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"}); return}
+  if(t.dataset.cmp){cmpFilter=t.dataset.cmp;render();return}
+  if(t.dataset.tl){tlFilter=t.dataset.tl;render();return}
+  if(t.dataset.gr){gr=t.dataset.gr;render();return}
+  if(t.dataset.qf){QF=t.dataset.qf; rerender(); return}
+  if(t.dataset.fs){ PREF.fs=Math.min(30,Math.max(14,PREF.fs+ +t.dataset.fs)); savePref(); rerender(); return}
+  if(t.dataset.pref){ PREF[t.dataset.pref]=!PREF[t.dataset.pref]; savePref(); rerender(); return}
+  if(t.dataset.read){ toggleRead(t.dataset.read); rerender(); return}
+  if(t.dataset.bm){ toggleBM(t.dataset.bm); if(t.hasAttribute("data-rerender")) rerender(); else t.classList.toggle("on",bmHas(t.dataset.bm)); return}
+  if(t.dataset.quiz){startQuiz(t.dataset.quiz); if(location.hash!=="#quiz") go("quiz"); else render(); return}
+  if(t.hasAttribute("data-quiz-reset")){Q=null;render();return}
+  if(t.dataset.opt!==undefined && Q && Q.picked===null){
+    Q.picked=+t.dataset.opt; if(Q.picked===Q.items[Q.i].a) Q.score++; KEEP=true; render(); return}
+  if(t.hasAttribute("data-next")){
+    if(Q.i+1>=Q.items.length){Q.done=true; const b=+store("tp-best")||0; if(Q.score>b) store("tp-best",String(Q.score));}
+    else{Q.i++;Q.picked=null}
+    render(); return}
+});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") tipHide(); });
+document.addEventListener("scroll",tipHide,{passive:true});
+let sdeb=null;
+document.addEventListener("input",e=>{
+  if(e.target.id==="gsearch"){gq=e.target.value;$("#glist").innerHTML=glossList()}
+  if(e.target.id==="qsearch"){QS=e.target.value;$("#qlist").innerHTML=surahList()}
+  if(e.target.id==="sinput"){ SQ=e.target.value; clearTimeout(sdeb); sdeb=setTimeout(()=>{ const r=$("#sresults"); if(r) r.innerHTML=searchResults(); },180); }
+});
+render();
+
+</script>
+<script>
+if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){ window.addEventListener("load",()=>{ try{ navigator.serviceWorker.register("sw.js").catch(()=>{}) }catch(e){} }); }
+</script>
+</body>
+</html>
