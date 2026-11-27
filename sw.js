@@ -1,8 +1,9 @@
 /* Three Paths service worker: caches everything so the app works fully offline. */
-const VERSION = "tp-v2-2026-11-27";
+const VERSION = "tp-v3-2026-11-27";
 const FILES = [
  "./",
- "data/bible-kjv.json",
+ "data/bible-kjv-1.json",
+ "data/bible-kjv-2.json",
  "data/deep.js",
  "data/fonts/amiri-arabic.woff2",
  "data/fonts/hanken-grotesk.woff2",

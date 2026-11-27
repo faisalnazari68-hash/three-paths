@@ -683,7 +683,7 @@ function loadJSON(name,url){
   if(DATA[name]) return Promise.resolve(DATA[name]);
   return fetch(url).then(r=>{ if(!r.ok) throw new Error(url+" "+r.status); return r.json(); }).then(j=>(DATA[name]=j));
 }
-const loadBible=()=>loadJSON("bible","data/bible-kjv.json");
+const loadBible=()=>DATA.bible?Promise.resolve(DATA.bible):Promise.all([fetch("data/bible-kjv-1.json"),fetch("data/bible-kjv-2.json")].map(p=>p.then(r=>{if(!r.ok)throw new Error("bible "+r.status);return r.json();}))).then(a=>(DATA.bible=a[0].concat(a[1])));
 const loadQuran=()=>loadJSON("quran","data/quran.json");
 const loadGita =()=>loadJSON("gita","data/gita.json");
 
